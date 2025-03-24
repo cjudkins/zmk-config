@@ -9,7 +9,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 # Trackball Support
 
 config SPI
-    bool
     default y
 
 config INPUT
