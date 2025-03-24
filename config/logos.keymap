@@ -93,7 +93,6 @@
 
         tri_app_swap: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
-            label = "App Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
