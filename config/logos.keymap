@@ -39,7 +39,7 @@
         layers = <LOWER RAISE ADJUST>;
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
-}
+};
 
 / {
     behaviors {
