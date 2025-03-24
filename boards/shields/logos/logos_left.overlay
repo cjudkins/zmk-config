@@ -1,9 +1,9 @@
 #include "logos.dtsi"
 
 &trackball_split {
-    device <&trackball_left>;
+    device = <&trackball_left>;
 };
 
 &trackball_listener {
     status = "okay";
-}
+};
