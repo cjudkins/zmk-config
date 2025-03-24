@@ -8,8 +8,8 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 # Trackball Support
 
-#config ZMK_POINTING
-#    default y
+config ZMK_POINTING
+    default y
 
 #config CONFIG_SPI
 #    bool
