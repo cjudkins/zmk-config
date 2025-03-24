@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <input/processors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -32,13 +31,6 @@
 
 &sl {
     release-after-ms = <STICKY_TIMEOUT_MS>;
-};
-
-&trackball_listener {
-    scroller {
-        layers = <LOWER RAISE ADJUST>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
 };
 
 / {
