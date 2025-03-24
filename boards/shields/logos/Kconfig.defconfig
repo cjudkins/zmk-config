@@ -6,7 +6,20 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+endif # SHIELD_LOGOS_LEFT
+
+if SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+config NFCT_PINS_AS_GPIOS
+    default y
+
 # Trackball Support
+
+config ZMK_POINTING
+    default y
 
 config SPI
     default y
@@ -15,19 +28,6 @@ config INPUT
     default y
 
 config PMW3610
-    default y
-
-endif # SHIELD_LOGOS_LEFT
-
-if SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-config ZMK_POINTING
-    default y
-
-config NFCT_PINS_AS_GPIOS
     default y
 
 endif # SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
