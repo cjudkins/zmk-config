@@ -13,7 +13,8 @@ if SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
 config ZMK_SPLIT
     default y
 
-config bool CONFIG_NFCT_PINS_AS_GPIOS
+config CONFIG_NFCT_PINS_AS_GPIOS
+    bool
     default y
 
 endif # SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
