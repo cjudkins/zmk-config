@@ -12,13 +12,11 @@ config SPI
     bool
     default y
 
-#config CONFIG_INPUT
-#    bool
-#    default y
+config INPUT
+    default y
 
-#config CONFIG_PMW3610
-#    bool
-#    default y
+config CONFIG_PMW3610
+    default y
 
 endif # SHIELD_LOGOS_LEFT
 
@@ -30,8 +28,7 @@ config ZMK_SPLIT
 config ZMK_POINTING
     default y
 
-config CONFIG_NFCT_PINS_AS_GPIOS
-    bool
+config NFCT_PINS_AS_GPIOS
     default y
 
 endif # SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
