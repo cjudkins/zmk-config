@@ -27,9 +27,9 @@ include:
   #  shield: cradio_right
   - board: seeeduino_xiao_ble
     shield: logos_left
+    artifact-name: logos-left
     #snippet: studio-rpc-usb-uart
     #cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: logos-left
   - board: seeeduino_xiao_ble
     shield: logos_right
     artifact-name: logos-right
