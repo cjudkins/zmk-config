@@ -1,0 +1,56 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            display-name = "Base";
+            bindings = <
+                &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
+                &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
+                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &kp COMMA    &DOT   &SLASH
+                                &mo 1   &sk LSHFT      &kp SPACE   &mo 2
+            >;
+        };
+
+        lower_layer {
+            display-name = "Lower";
+            bindings = <
+                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)                &trans &trans  &trans  &trans  &trans
+                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &trans             &kp HOME &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &trans &kp LS(TAB) &kp TAB &kp RET &kp LS(RET)                &kp END &trans &kp PG_DN &kp PG_UP &trans
+                                                          &trans &trans        &trans &trans
+            >;
+        };
+
+        raise_layer {
+            display-name = "Raise";
+            bindings = <
+                &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH                     &kp DELETE         &trans  &trans  &trans  &trans
+                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SEMI                    &trans          &sk RGUI        &sk RSHFT        &sk LALT       &sk RCTRL
+                &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &kp LA(BSPC)  &kp BSPC   &trans          &trans          &trans
+                                                &trans  &trans                  &trans  &trans
+            >;
+        };
+
+        adjust_layer {
+            display-name = "Adjust";
+            bindings = <
+                &kp C_AL_LOCK   &trans  &trans   &trans  &trans       &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
+                &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &trans               &kp PSCRN       &kp F5  &kp F6  &kp F7  &kp F8
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_PP    &kp INS         &kp F9  &kp F10 &kp F11 &kp F12
+                                                    &trans   &bt BT_NXT             &bt BT_CLR  &trans
+            >;
+        };
+
+        extra_1 {
+            status = "reserved";
+        };
+
+        extra_2 {
+            status = "reserved";
+        };
+    };
+};

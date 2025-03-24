@@ -1,0 +1,19 @@
+if SHIELD_LOGOS_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Logos"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_POINTING
+    default y
+
+endif # SHIELD_LOGOS_LEFT
+
+if SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT

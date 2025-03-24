@@ -1,0 +1,5 @@
+config SHIELD_LOGOS_LEFT
+    def_bool $(shields_list_contains,logos_left)
+
+config SHIELD_LOGOS_RIGHT
+    def_bool $(shields_list_contains,logos_right)
