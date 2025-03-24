@@ -7,7 +7,7 @@ url: https://github.com/cjudkins/zmk-config-logos
 
 features:
   - keys
-  - studio  # Remove this line if your keyboard will not support ZMK Studio
+  - studio
   - pointer
 requires:
   - seeed_xiao
