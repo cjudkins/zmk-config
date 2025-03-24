@@ -15,7 +15,7 @@ config SPI
 config INPUT
     default y
 
-config CONFIG_PMW3610
+config PMW3610
     default y
 
 endif # SHIELD_LOGOS_LEFT
