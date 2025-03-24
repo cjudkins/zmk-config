@@ -1,17 +1,10 @@
-# This file was generated from a template. Edit it to match your keyboard.
-# See https://zmk.dev/docs/development/hardware-integration/hardware-metadata-files
-# for instructions.
-
 file_format: "1"
 id: logos
 name: Logos
 type: shield
 
-# Set this to a URL that documents the keyboard.
 url: https://github.com/cjudkins/zmk-config-logos
 
-# Add any features your keyboard supports here.
-# See https://zmk.dev/docs/development/hardware-integration/hardware-metadata-files#features
 features:
   - keys
   - studio  # Remove this line if your keyboard will not support ZMK Studio

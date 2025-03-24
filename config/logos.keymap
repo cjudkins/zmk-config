@@ -1,0 +1,217 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+// Layers
+#define BASE    0
+#define POINTER 1
+#define LOWER   2
+#define RAISE   3
+#define ADJUST  4
+
+// Timings
+#define TAPPING_TERM_MS 100
+#define COMBO_TIMEOUT_MS 50
+#define STICKY_TIMEOUT_MS 2000
+
+// Shorthands
+#define TAB_L LS(LC(TAB))       // Previous tab
+#define TAB_R LC(TAB)           // Next tab
+#define DSKTP_L LG(LC(LEFT))    // Previous Space
+#define DSKTP_R LG(LC(RIGHT))   // Next Space
+#define BACK LG(LBRC)           // Back
+#define FWRD LG(RBRC)           // Forward
+#define FQUIT LG(LA(ESC))       // Force Quit
+#define MEH LA(LC(LEFT_SHIFT))  // ctrl+alt+shift
+
+&sk {
+    release-after-ms = <STICKY_TIMEOUT_MS>;
+};
+
+&sl {
+    release-after-ms = <STICKY_TIMEOUT_MS>;
+};
+
+/ {
+    behaviors {
+        morph_period: morph_period {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_comma: morph_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_qmark: morph_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_lpar: morph_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LESS_THAN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rpar: morph_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GREATER_THAN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_lbkt: morph_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LEFT_BRACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rbkt: morph_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        td_shift_caps: td_shift_caps {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+        };
+
+        tri_app_swap: tri_app_swap {
+            compatible = "zmk,behavior-tri-state";
+            label = "App Swapper";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+        };
+    };
+};
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        combo_lpar {
+            bindings = <&morph_lpar>;
+            key-positions = <20 21>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        combo_rpar {
+            bindings = <&morph_rpar>;
+            key-positions = <29 28>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        combo_left_click {
+            bindings = <&mkp MB1>;
+            key-positions = <26 27>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        combo_right_click {
+            bindings = <&mkp MB2>;
+            key-positions = <26 28>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        combo_middle_click {
+            bindings = <&mkp MB3>;
+            key-positions = <26 27 28>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+    };
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            display-name = "Base";
+            bindings = <
+                &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
+                &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
+                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &morph_comma    &morph_period   &morph_qmark
+                                &sl LOWER   &td_shift_caps      &lt POINTER SPACE   &sl RAISE
+            >;
+        };
+
+        pointer_layer {
+            display-name = "Pointer";
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+                &sk LCTRL &sk LALT &sk LSHFT  &sk LGUI &sk MEH      &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
+                &trans  &trans  &trans  &trans  &trans              &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
+                                        &trans  &trans              &trans  &trans
+            >;
+        };
+
+        lower_layer {
+            display-name = "Lower";
+            bindings = <
+                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)                &tri_app_swap &kp TAB_L  &kp DSKTP_L &kp DSKTP_R &kp TAB_R
+                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH             &kp HOME &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &trans &kp LS(TAB) &kp TAB &kp RET &kp LS(RET)                &kp END &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
+                                                          &trans &trans        &trans &trans
+            >;
+        };
+
+        raise_layer {
+            display-name = "Raise";
+            bindings = <
+                &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH                     &kp DELETE         &morph_lpar  &morph_lbkt  &morph_rbkt  &morph_rpar
+                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH          &sk RGUI        &sk RSHFT        &sk LALT       &sk RCTRL
+                &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &kp LA(BSPC)  &kp BSPC   &trans          &trans          &trans
+                                                &trans  &trans                  &trans  &trans
+            >;
+        };
+
+        adjust_layer {
+            display-name = "Adjust";
+            bindings = <
+                &kp C_AL_LOCK   &kp FQUIT  &trans   &trans   &trans     &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
+                &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &sk MEH               &kp PSCRN       &kp F5  &kp F6  &kp F7  &kp F8
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_PP    &kp INS         &kp F9  &kp F10 &kp F11 &kp F12
+                                                    &trans  &bt BT_NXT             &bt BT_CLR &trans
+            >;
+        };
+
+        extra_1 {
+            status = "reserved";
+        };
+
+        extra_2 {
+            status = "reserved";
+        };
+    };
+};
