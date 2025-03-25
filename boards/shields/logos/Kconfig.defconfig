@@ -13,8 +13,9 @@ if SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
 config ZMK_SPLIT
     default y
 
-config NFCT_PINS_AS_GPIOS
-    default y
+# I think this may already be the default, should test disabling it
+#config NFCT_PINS_AS_GPIOS
+#    default y
 
 # Trackball Support
 
