@@ -13,11 +13,7 @@ if SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT
 config ZMK_SPLIT
     default y
 
-# I think this may already be the default, should test disabling it
-#config NFCT_PINS_AS_GPIOS
-#    default y
-
-# Trackball Support
+# Trackball
 
 config ZMK_POINTING
     default y
@@ -30,5 +26,9 @@ config INPUT
 
 config PMW3610
     default y
+
+# I think this may already be the default, try with it disabled
+#config NFCT_PINS_AS_GPIOS
+#    default y
 
 endif # SHIELD_LOGOS_LEFT || SHIELD_LOGOS_RIGHT

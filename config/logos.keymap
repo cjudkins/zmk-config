@@ -11,19 +11,19 @@
 #define ADJUST  4
 
 // Timings
-#define TAPPING_TERM_MS 100
-#define COMBO_TIMEOUT_MS 50
-#define STICKY_TIMEOUT_MS 2000
+#define TAPPING_TERM_MS     100
+#define COMBO_TIMEOUT_MS    50
+#define STICKY_TIMEOUT_MS   2000
 
 // Shorthands
-#define TAB_L LS(LC(TAB))       // Previous tab
-#define TAB_R LC(TAB)           // Next tab
-#define DSKTP_L LG(LC(LEFT))    // Previous Space
-#define DSKTP_R LG(LC(RIGHT))   // Next Space
-#define BACK LG(LBRC)           // Back
-#define FWRD LG(RBRC)           // Forward
-#define FQUIT LG(LA(ESC))       // Force Quit
-#define MEH LA(LC(LEFT_SHIFT))  // ctrl+alt+shift
+#define TAB_L   LS(LC(TAB))         // Previous tab
+#define TAB_R   LC(TAB)             // Next tab
+#define DSKTP_L LG(LC(LEFT))        // Previous Space
+#define DSKTP_R LG(LC(RIGHT))       // Next Space
+#define BACK    LG(LBRC)            // Back
+#define FWRD    LG(RBRC)            // Forward
+#define FQUIT   LG(LA(ESC))         // Force Quit
+#define MEH     LA(LC(LEFT_SHIFT))  // ctrl+alt+shift
 
 &sk {
     release-after-ms = <STICKY_TIMEOUT_MS>;

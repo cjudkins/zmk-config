@@ -3,7 +3,7 @@ id: logos
 name: Logos
 type: shield
 
-url: https://github.com/cjudkins/zmk-config-logos
+url: https://github.com/cjudkins/zmk-config
 
 features:
   - keys
