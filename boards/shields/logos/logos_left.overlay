@@ -1,16 +1,12 @@
 #include "logos.dtsi"
 
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-
-&spi0 {
+&trackball_right_listener {
     status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+};
 
-    trackball: trackball@0 {
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+&spi0 {
+    trackball_left: trackball_left@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
@@ -28,10 +24,8 @@
     };
 };
 
-&trackball_split {
-    device = <&trackball>;
+&trackball_left_listener {
+    status = "okay";
+    device = <&trackball_left>;
 };
 
-&trackball_listener {
-    status = "okay";
-};
