@@ -83,12 +83,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        td_shift_caps: td_shift_caps {
-            compatible = "zmk,behavior-tap-dance";
+        morph_shift_caps: morph_shift_caps {
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM_MS>;
             bindings = <&sk LSHIFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
         };
+
+        ht_bt: ht_bt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            bindings = <&bt>, <&bt>;
+        }
 
         tri_app_swap: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
@@ -144,7 +152,7 @@
                 &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
                 &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
                 &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &morph_comma    &morph_period   &morph_qmark
-                                &sl LOWER   &td_shift_caps      &kp SPACE   &sl RAISE
+                                &sl LOWER   &morph_shift_caps      &kp SPACE   &sl RAISE
             >;
         };
 
@@ -171,7 +179,7 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_AL_LOCK   &kp FQUIT  &studio_unlock  &bt BT_NXT &bt BT_CLR        &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
+                &kp C_AL_LOCK   &kp FQUIT  &trans  &ht_bt BT_SEL 0 BT_CLR &ht_bt BT_SEL 1 BT_CLR        &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
                 &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &sk MEH               &kp PSCRN       &kp F5  &kp F6  &kp F7  &kp F8
                 &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_PP    &kp INS         &kp F9  &kp F10 &kp F11 &kp F12
                                                     &trans   &trans             &trans  &trans
