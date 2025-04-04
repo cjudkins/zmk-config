@@ -95,7 +95,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             bindings = <&bt>, <&bt>;
-            display-name = "Bluetooth Hold-Tap"
+            display-name = "Bluetooth Hold-Tap";
         };
 
         tri_app_swap: tri_app_swap {
