@@ -86,7 +86,6 @@
         morph_shift_caps: morph_shift_caps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
             bindings = <&sk LSHIFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
         };
