@@ -1,10 +1,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
-        
+
         default_layer {
             display-name = "Base";
             bindings = <
@@ -18,9 +19,9 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)                &trans &trans  &trans  &trans  &trans
+                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)           &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
                 &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &trans             &kp HOME &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &trans &kp LS(TAB) &kp TAB &kp RET &kp LS(RET)                &kp END &trans &kp PG_DN &kp PG_UP &trans
+                &trans &kp LS(TAB) &kp TAB &kp RET &kp LS(RET)                 &kp END &trans &kp PG_DN &kp PG_UP &trans
                                                           &trans &trans        &trans &trans
             >;
         };
@@ -50,6 +51,14 @@
         };
 
         extra_2 {
+            status = "reserved";
+        };
+
+        extra_3 {
+            status = "reserved";
+        };
+
+        extra_4 {
             status = "reserved";
         };
     };

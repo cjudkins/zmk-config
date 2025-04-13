@@ -33,18 +33,6 @@
 };
 
 / {
-    macros {
-        macro_bt: macro_bt {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings 
-                = <&macro_param_1to1>
-                , <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>;
-        };
-    };
-};
-
-/ {
     behaviors {
         morph_period: morph_period {
             compatible = "zmk,behavior-mod-morph";
@@ -102,30 +90,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        ht_bt0: ht_bt0 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            bindings = <&macro_bt 0>, <&bt BT_CLR>;
-            display-name = "Bluetooth Hold-Tap 0";
-        };
-
-        ht_bt1: ht_bt1 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            bindings = <&macro_bt 1>, <&bt BT_CLR>;
-            display-name = "Bluetooth Hold-Tap 1";
-        };
-
-        ht_bt2: ht_bt2 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            bindings = <&macro_bt 2>, <&bt BT_CLR>;
-            display-name = "Bluetooth Hold-Tap 2";
-        };
-
         tri_app_swap: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
             label = "App Swapper";
@@ -153,7 +117,6 @@
             bindings = <&kp ESC>;
             key-positions = <0 1>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
-
         };
 
         combo_lpar {
@@ -193,7 +156,7 @@
                                                           &trans &trans        &trans &trans
             >;
         };
-      
+
         raise_layer {
             display-name = "Raise";
             bindings = <
@@ -207,7 +170,7 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_AL_LOCK   &kp FQUIT  &trans  &ht_bt0  &ht_bt1              &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
+                &kp C_AL_LOCK   &kp FQUIT  &trans  &bt BT_SEL 0  &bt BT_SEL 1   &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
                 &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &sk MEH               &kp PSCRN       &kp F5  &kp F6  &kp F7  &kp F8
                 &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_PP    &kp INS         &kp F9  &kp F10 &kp F11 &kp F12
                                                     &trans   &trans             &bt BT_CLR  &trans
@@ -217,7 +180,7 @@
         extra_1 {
             status = "reserved";
         };
-            
+
         extra_2 {
             status = "reserved";
         };
