@@ -62,18 +62,4 @@
             status = "reserved";
         };
     };
-
-    qwerty {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            display-name = "Base";
-            bindings = <
-                &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp L   &kp U   &kp Y   &kp APOS
-                &kp A   &kp S   &kp D   &kp F   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
-                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &kp COMMA    &DOT   &SLASH
-                                &kp BSPC   &sk LSHFT      &kp SPACE   &kp RET
-            >;
-        };
-    };
 };
