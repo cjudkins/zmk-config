@@ -137,24 +137,6 @@
             key-positions = <29 28>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
         };
-
-        combo_left_click {
-            bindings = <&mkp MB1>;
-            key-positions = <26 27>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-        };
-
-        combo_right_click {
-            bindings = <&mkp MB2>;
-            key-positions = <26 28>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-        };
-
-        combo_middle_click {
-            bindings = <&mkp MB3>;
-            key-positions = <26 27 28>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-        };
     };
 };
 
