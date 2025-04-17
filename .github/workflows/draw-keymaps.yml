@@ -20,5 +20,5 @@ jobs:
       output_folder: keymap-drawer
       install_branch: main
       amend_commit: true
-      parse-args: "logos:'-c 10 -z config/logos.keymap'"
+      parse_args: "logos:'-c 10 -z config/logos.keymap'"
       draw_args: "logos:'-d boards/shields/logos/logos-layouts.dtsi'"
