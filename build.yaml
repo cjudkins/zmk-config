@@ -15,3 +15,5 @@ include:
   - board: seeeduino_xiao_ble
     shield: logos_right rgbled_adapter
     artifact-name: logos-right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
