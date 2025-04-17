@@ -53,12 +53,12 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Lower:
-  - [ESC, Gui+X, Gui+C, Gui+V, Gui+Z, '&tri_app_swap', Sft+Ctl+TAB, Gui+Ctl+LEFT, Gui+Ctl+RIGHT, Ctl+TAB]
+  - [ESC, Cmd+X, Cmd+C, Cmd+V, Cmd+Z, '&tri_app_swap', Sft+Ctl+TAB, Cmd+Ctl+LEFT, Cmd+Ctl+RIGHT, Ctl+TAB]
   - - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
     - {t: LSHFT, h: sticky}
     - {t: LGUI, h: sticky}
-    - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
+    - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
     - HOME
     - LEFT
     - DOWN
@@ -70,10 +70,10 @@ layers:
     - RET
     - Sft+RET
     - END
-    - Gui+{
+    - Cmd+{
     - PG DN
     - PG UP
-    - Gui+}
+    - Cmd+}
   - - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -94,7 +94,7 @@ layers:
     - '5'
     - '6'
     - /
-    - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
+    - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
     - {t: RGUI, h: sticky}
     - {t: RSHFT, h: sticky}
     - {t: LALT, h: sticky}
@@ -104,7 +104,7 @@ layers:
     - '8'
     - '9'
     - '0'
-    - Alt+BSPC
+    - Opt+BSPC
     - BSPC
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -115,7 +115,7 @@ layers:
     - {type: held}
   Adjust:
   - - AL LOCK
-    - Gui+Alt+ESC
+    - Cmd+Opt+ESC
     - {t: ▽, type: trans}
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
@@ -128,7 +128,7 @@ layers:
     - {t: LALT, h: sticky}
     - {t: LSHFT, h: sticky}
     - {t: LGUI, h: sticky}
-    - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
+    - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
     - PSCRN
     - F5
     - F6
