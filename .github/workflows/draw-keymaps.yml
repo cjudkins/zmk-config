@@ -15,10 +15,10 @@ jobs:
     permissions:
       contents: write
     with:
+      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       keymap_patterns: 'config/*.keymap'
       config_path: keymap-drawer/config.yaml
       output_folder: keymap-drawer
       install_branch: main
-      amend_commit: true
       parse_args: "logos:'-c 10 -z config/logos.keymap'"
       draw_args: "logos:'-d boards/shields/logos/logos-layouts.dtsi'"
