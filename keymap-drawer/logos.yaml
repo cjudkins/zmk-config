@@ -1,180 +1,144 @@
 layout: {zmk_keyboard: logos}
 layers:
   Base:
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ''''
-  - A
-  - R
-  - S
-  - T
-  - G
-  - M
-  - N
-  - E
-  - I
-  - O
-  - Z
-  - X
-  - C
-  - D
-  - V
-  - K
-  - H
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
-  - Lower
-  - '&td_shift_caps'
-  - {t: SPACE, s: BSPC}
-  - Raise
+  - [Q, W, F, P, B, J, L, U, Y, '''']
+  - [A, R, S, T, G, M, N, E, I, O]
+  - - Z
+    - X
+    - C
+    - D
+    - V
+    - K
+    - H
+    - {t: ',', s: ;}
+    - {t: ., s: ':'}
+    - {t: '?', s: '!'}
+  - - Lower
+    - '&td_shift_caps'
+    - {t: SPACE, s: BSPC}
+    - Raise
   Pointer:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp MB3'
-  - '&mkp MB2'
-  - '&mkp MB1'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - '&mkp MB3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '&mkp MB3'
+    - '&mkp MB2'
+    - '&mkp MB1'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&mkp MB1'
+    - '&mkp MB2'
+    - '&mkp MB3'
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   Lower:
-  - ESC
-  - Gui+X
-  - Gui+C
-  - Gui+V
-  - Gui+Z
-  - '&tri_app_swap'
-  - Sft+Ctl+TAB
-  - Gui+Ctl+LEFT
-  - Gui+Ctl+RIGHT
-  - Ctl+TAB
-  - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LSHFT, h: sticky}
-  - {t: LGUI, h: sticky}
-  - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
-  - HOME
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - {t: ▽, type: trans}
-  - Sft+TAB
-  - TAB
-  - RET
-  - Sft+RET
-  - END
-  - Gui+{
-  - PG DN
-  - PG UP
-  - Gui+}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - [ESC, Gui+X, Gui+C, Gui+V, Gui+Z, '&tri_app_swap', Sft+Ctl+TAB, Gui+Ctl+LEFT, Gui+Ctl+RIGHT, Ctl+TAB]
+  - - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
+    - HOME
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+  - - {t: ▽, type: trans}
+    - Sft+TAB
+    - TAB
+    - RET
+    - Sft+RET
+    - END
+    - Gui+{
+    - PG DN
+    - PG UP
+    - Gui+}
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   Raise:
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - \
-  - DELETE
-  - {t: (, s: <}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: ), s: '>'}
-  - '-'
-  - '4'
-  - '5'
-  - '6'
-  - /
-  - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
-  - {t: RGUI, h: sticky}
-  - {t: RSHFT, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: RCTRL, h: sticky}
-  - '='
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - Alt+BSPC
-  - BSPC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
+  - - '`'
+    - '1'
+    - '2'
+    - '3'
+    - \
+    - DELETE
+    - {t: (, s: <}
+    - {t: '[', s: '{'}
+    - {t: ']', s: '}'}
+    - {t: ), s: '>'}
+  - - '-'
+    - '4'
+    - '5'
+    - '6'
+    - /
+    - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
+    - {t: RGUI, h: sticky}
+    - {t: RSHFT, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: RCTRL, h: sticky}
+  - - '='
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - Alt+BSPC
+    - BSPC
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
   Adjust:
-  - AL LOCK
-  - Gui+Alt+ESC
-  - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - PAUSE BREAK
-  - F1
-  - F2
-  - F3
-  - F4
-  - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LSHFT, h: sticky}
-  - {t: LGUI, h: sticky}
-  - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
-  - PSCRN
-  - F5
-  - F6
-  - F7
-  - F8
-  - VOL DN
-  - PREV
-  - NEXT
-  - VOL UP
-  - PP
-  - INS
-  - F9
-  - F10
-  - F11
-  - F12
-  - {type: held}
-  - {t: ▽, type: trans}
-  - BT CLR
-  - {type: held}
+  - - AL LOCK
+    - Gui+Alt+ESC
+    - {t: ▽, type: trans}
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - PAUSE BREAK
+    - F1
+    - F2
+    - F3
+    - F4
+  - - {t: LCTRL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LSHFT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - {t: Alt+Ctl+LEFT SHIFT, h: sticky}
+    - PSCRN
+    - F5
+    - F6
+    - F7
+    - F8
+  - [VOL DN, PREV, NEXT, VOL UP, PP, INS, F9, F10, F11, F12]
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - BT CLR
+    - {type: held}
 combos:
 - p: [0, 1]
   k: ESC
@@ -182,9 +146,3 @@ combos:
   k: {t: (, s: <}
 - p: [29, 28]
   k: {t: ), s: '>'}
-- p: [26, 27]
-  k: '&mkp MB1'
-- p: [26, 28]
-  k: '&mkp MB2'
-- p: [26, 27, 28]
-  k: '&mkp MB3'
