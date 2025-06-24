@@ -31,10 +31,10 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - {t: Lower, h: sticky}
+  - {t: BSPC, h: Lower}
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
-  - SPACE
-  - {t: Raise, h: sticky}
+  - {t: SPACE, h: Adjust}
+  - {t: RET, h: Raise}
   Lower:
   - ESC
   - Cmd+X
@@ -136,10 +136,10 @@ layers:
   - F10
   - F11
   - F12
-  - {type: held}
   - {t: ▽, type: trans}
-  - BT CLR
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: BT CLR, type: held}
+  - {t: ▽, type: trans}
 combos:
 - p: [0, 1]
   k: ESC
