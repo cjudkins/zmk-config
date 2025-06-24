@@ -90,6 +90,13 @@
             mods = <(MOD_LSFT)>;
         };
 
+        morph_space: morph_space {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp BSPC>;
+            mods = <(MOD_LSFT)>;
+        };
+
         tri_app_swap: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
             label = "App Swapper";
@@ -143,7 +150,7 @@
                 &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
                 &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
                 &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &morph_comma    &morph_period   &morph_qmark
-                                &sl LOWER   &morph_shift_caps      &kp SPACE   &sl RAISE
+                                &lt BSPC LOWER   &morph_shift_caps      &lt SPACE ADJUST   &lt RET RAISE
             >;
         };
 
