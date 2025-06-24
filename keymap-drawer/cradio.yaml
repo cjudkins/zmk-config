@@ -57,10 +57,10 @@ layers:
   - UP
   - RIGHT
   - {t: GLOBE, h: sticky}
-  - Sft+TAB
-  - TAB
-  - RET
-  - Sft+RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - END
   - Cmd+{
   - PG DN
@@ -96,8 +96,8 @@ layers:
   - '8'
   - '9'
   - '0'
-  - Opt+BSPC
-  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: GLOBE, h: sticky}
@@ -106,16 +106,6 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   Adjust:
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - BT CLR
-  - AL LOCK
-  - Cmd+Opt+ESC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - VOL DN
   - PREV
   - NEXT
@@ -126,16 +116,26 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&sys_reset'
-  - '&bootloader'
-  - '&soft_off'
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LSHFT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
+  - {t: ▽, type: trans}
+  - RET
+  - TAB
+  - BSPC
+  - DEL
+  - {t: GLOBE, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&bootloader'
-  - '&sys_reset'
+  - Sft+RET
+  - Sft+TAB
+  - Opt+BSPC
+  - Opt+DEL
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -146,7 +146,7 @@ layers:
   - '@'
   - '#'
   - '|'
-  - DELETE
+  - {t: ▽, type: trans}
   - {t: (, s: <}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -166,8 +166,8 @@ layers:
   - '*'
   - (
   - )
-  - Opt+BSPC
-  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -176,11 +176,11 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   Function:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - AL LOCK
+  - Cmd+Opt+ESC
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - BT CLR
   - PAUSE BREAK
   - F1
   - F2
