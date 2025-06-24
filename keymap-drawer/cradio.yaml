@@ -31,10 +31,10 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - {t: '1', h: sticky}
+  - {t: Lower, h: sticky}
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
   - {t: SPACE, h: Symbol}
-  - {t: '2', h: sticky}
+  - {t: Raise, h: sticky}
   Lower:
   - ESC
   - Cmd+X
@@ -66,7 +66,7 @@ layers:
   - PG DN
   - PG UP
   - Cmd+}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -104,7 +104,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   Adjust:
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -136,10 +136,10 @@ layers:
   - {t: ▽, type: trans}
   - '&bootloader'
   - '&sys_reset'
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   Symbol:
   - '~'
   - '!'
@@ -206,7 +206,7 @@ layers:
   - F10
   - F11
   - F12
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
