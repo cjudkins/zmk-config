@@ -198,7 +198,7 @@
                 &kp PLUS  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR                       &kp LA(BSPC)  &kp BSPC   &trans          &trans          &trans
                                                 &trans  &trans                  &trans  &trans
             >;
-        }
+        };
 
         function_layer {
             display-name = "Function";
@@ -208,7 +208,7 @@
                 &trans  &trans  &trans  &trans  &bt BT_CLR                      &kp INS  &kp F9  &kp F10 &kp F11 &kp F12
                                                     &trans  &trans              &trans  &trans
             >;
-        }
+        };
 
         extra_1 {
             status = "reserved";
