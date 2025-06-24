@@ -33,7 +33,7 @@ layers:
   - {t: '?', s: '!'}
   - {t: BSPC, h: Lower}
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
-  - {t: SPACE, h: Adjust}
+  - {t: SPACE, h: Symbol}
   - {t: RET, h: Raise}
   Lower:
   - ESC
@@ -106,11 +106,11 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   Adjust:
-  - AL LOCK
-  - Cmd+Opt+ESC
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PAUSE BREAK
   - F1
   - F2
@@ -136,9 +136,44 @@ layers:
   - F10
   - F11
   - F12
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT CLR, type: held}
+  - {type: held}
+  Symbol:
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - DELETE
+  - {t: (, s: <}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: ), s: '>'}
+  - '-'
+  - $
+  - '%'
+  - ^
+  - '?'
+  - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
+  - {t: RGUI, h: sticky}
+  - {t: RSHFT, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - +
+  - '&'
+  - '*'
+  - (
+  - )
+  - Opt+BSPC
+  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
 combos:
 - p: [0, 1]
