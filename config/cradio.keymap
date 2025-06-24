@@ -3,10 +3,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Layers
-#define BASE    0
-#define LOWER   1
-#define RAISE   2
-#define ADJUST  3
+#define BASE     0
+#define LOWER    1
+#define RAISE    2
+#define ADJUST   3
+#define SYMBOL   4
+#define FUNCTION 5
 
 // Tuning
 #define TAPPING_TERM_MS 200
@@ -30,6 +32,12 @@
 
 &sl {
     release-after-ms = <STICKY_TIMEOUT_MS>;
+};
+
+&lt {
+    tapping-term-ms = <120>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
 };
 
 / {
@@ -90,13 +98,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        morph_space: morph_space {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp BSPC>;
-            mods = <(MOD_LSFT)>;
-        };
-
         tri_app_swap: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
             label = "App Swapper";
@@ -112,6 +113,11 @@
         tri_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
+        };
+
+        quad_layer {
+            if-layers = <LOWER SYMBOL>;
+            then-layer = <FUNCTION>;
         };
     };
 };
@@ -150,7 +156,7 @@
                 &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
                 &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
                 &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &morph_comma    &morph_period   &morph_qmark
-                                &lt LOWER BSPC   &morph_shift_caps      &lt ADJUST SPACE  &lt RAISE RET
+                                &lt LOWER BSPC   &morph_shift_caps      &lt SYMBOL SPACE  &lt RAISE RET
             >;
         };
 
@@ -177,12 +183,32 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_AL_LOCK   &kp FQUIT  &trans  &bt BT_SEL 0  &bt BT_SEL 1   &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
+                &trans   &trans  &trans  &trans  &trans               &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
                 &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &sk MEH               &kp PSCRN       &kp F5  &kp F6  &kp F7  &kp F8
                 &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_PP    &kp INS         &kp F9  &kp F10 &kp F11 &kp F12
-                                                    &trans   &trans             &bt BT_CLR  &trans
+                                                    &trans   &trans             &trans  &trans
             >;
         };
+
+        symbol_layer {
+            display-name = "Symbol";
+            bindings = <
+                &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp PIPE                     &kp DELETE         &morph_lpar  &morph_lbkt  &morph_rbkt  &morph_rpar
+                &kp MINUS  &kp DLLR  &kp PRCNT  &kp CARET &kp QMARK                    &sk MEH          &sk RGUI        &sk RSHFT        &sk LALT       &sk RCTRL
+                &kp PLUS  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR                       &kp LA(BSPC)  &kp BSPC   &trans          &trans          &trans
+                                                &trans  &trans                  &trans  &trans
+            >;
+        }
+
+        function_layer {
+            display-name = "Function";
+            bindings = <
+                &bt BT_SEL 0 &bt BT_SEL 1 &kp C_AL_LOCK  &kp FQUIT  &trans     &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
+                &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &sk MEH               &kp PSCRN  &kp F5  &kp F6  &kp F7  &kp F8
+                &trans  &trans  &trans  &trans  &bt BT_CLR                      &kp INS  &kp F9  &kp F10 &kp F11 &kp F12
+                                                    &trans  &trans              &trans  &trans
+            >;
+        }
 
         extra_1 {
             status = "reserved";
