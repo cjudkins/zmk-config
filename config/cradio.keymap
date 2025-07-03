@@ -4,12 +4,11 @@
 
 // Layers
 #define BASE    0
-#define POINT   1
-#define NAV     2
-#define NUM     3
-#define SYM     4
-#define ADJUST  5
-#define SYS     6
+#define NAV     1
+#define NUM     2
+#define SYM     3
+#define ADJUST  4
+#define SYS     5
 
 // Tuning
 #define TAPPING_TERM_MS 200
@@ -171,16 +170,6 @@
             >;
         };
 
-        pointer_layer {
-            display-name = "Pointer";
-            bindings = <
-                &trans   &trans   &trans   &trans   &trans       &trans   &trans   &trans   &trans   &trans
-                &trans   &trans   &trans   &trans   &trans       &trans   &trans   &trans   &trans   &trans
-                &trans   &trans   &trans   &trans   &trans       &trans   &trans   &trans    &trans   &trans
-                                &trans   &trans      &trans  &trans
-            >;
-        };
-
         nav_layer {
             display-name = "Navigation";
             bindings = <
@@ -194,9 +183,9 @@
         num_layer {
             display-name = "Number";
             bindings = <
-                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ASTRK                    &trans   &trans   &trans   &trans   &trans
-                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH   &sk RGUI        &sk RSHFT &sk LALT &sk RCTRL
-                &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &trans   &trans          &trans          &sk GLOBE
+                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ASTRK                    &trans  &trans   &trans   &trans   &trans
+                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH   &sk RGUI  &sk RSHFT &sk LALT &sk RCTRL
+                &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &trans  &trans  &trans  &sk GLOBE
                                                 &trans  &trans                  &trans  &trans
             >;
         };
@@ -204,9 +193,9 @@
         symbol_layer {
             display-name = "Symbol";
             bindings = <
-                &kp GRAVE   &kp MINUS   &kp PIPE    &kp UNDER   &kp TILDE       &trans  &kp HASH  &kp DLLR  &kp PRCNT  &
-                &kp SLASH   &kp LPAR    &kp LBKT    &kp LBRC    &kp GT          &sk LCTL  &sk LALT  &sk LSHFT  &sk LGUI &sk MEH
-                &kp BSLH    &kp RPAR    &kp RBKT    &kp RBRC    &kp LT          &sk GLOBE  &kp CARET  &kp AT   &kp AMPS  &trans
+                &kp GRAVE   &kp UNDER   &kp PIPE    &kp MINUS   &kp TILDE       &trans  &kp HASH  &kp DLLR  &kp PRCNT  &trans
+                &kp GT   &kp LBRC    &kp LBKT    &kp LPAR    &kp SLASH          &sk MEH &sk RGUI &sk RSHFT  &sk LALT  &sk RCTL
+                &kp LT   &kp RBRC    &kp RBKT    &kp RPAR    &kp BSLH           &trans  &kp CARET  &kp AT   &kp AMPS  &sk GLOBE
                                                 &trans  &trans                  &trans  &trans
             >;
         };
