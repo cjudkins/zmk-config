@@ -3,12 +3,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Layers
-#define BASE     0
-#define LOWER    1
-#define RAISE    2
-#define ADJUST   3
-#define SYMBOL   4
-#define FUNCTION 5
+#define BASE    0
+#define POINT   1
+#define NAV     2
+#define NUM     3
+#define SYM     4
+#define ADJUST  5
+#define SYS     6
 
 // Tuning
 #define TAPPING_TERM_MS 200
@@ -18,12 +19,11 @@
 // Shorthands
 #define TAB_L LS(LC(TAB))     // Switch tab left
 #define TAB_R LC(TAB)         // Switch tab right
-#define DSKTP_L LG(LC(LEFT))  // Switch desktop (space) left
-#define DSKTP_R LG(LC(RIGHT)) // Switch desktop (space) right
 #define BACK LG(LBRC)         // Go Back in history
 #define FWRD LG(RBRC)         // Go Forward in history
 #define FQUIT LG(LA(ESC))     // Force Quit/Task Manager
-#define SW_APP LG(TAB)        // Switch app (alt-tab)
+#define EXPOSE LC(UP)
+#define EMOJI LC(LG(SPACE))
 #define MEH LA(LC(LEFT_SHIFT))
 
 &sk {
@@ -41,7 +41,7 @@
 };
 
 &soft_off {
-    hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
+    hold-time-ms = <2000>;
 };
 
 / {
@@ -108,6 +108,13 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
+        
+        tri_win_swap: tri_win_swap {
+            compatible = "zmk,behavior-tri-state";
+            label = "Window Swapper";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+        };
     };
 };
 
@@ -115,13 +122,13 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <NAV NUM>;
             then-layer = <ADJUST>;
         };
 
         quad_layer {
-            if-layers = <LOWER SYMBOL>;
-            then-layer = <FUNCTION>;
+            if-layers = <NAV SYMBOL>;
+            then-layer = <SYS>;
         };
     };
 };
@@ -160,56 +167,66 @@
                 &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
                 &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
                 &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &morph_comma    &morph_period   &morph_qmark
-                                &sl LOWER   &morph_shift_caps      &lt SYMBOL SPACE  &sl RAISE
+                                &sl NAV   &morph_shift_caps      &lt SYMBOL SPACE  &sl NUM
             >;
         };
 
-        lower_layer {
-            display-name = "Lower";
+        pointer_layer {
+            display-name = "Pointer";
             bindings = <
-                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)           &tri_app_swap &kp TAB_L  &kp DSKTP_L &kp DSKTP_R &kp TAB_R
-                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH            &kp HOME &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &sk GLOBE   &trans  &trans  &trans  &trans                     &kp END &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
+                &trans   &trans   &trans   &trans   &trans       &trans   &trans   &trans   &trans   &trans
+                &trans   &trans   &trans   &trans   &trans       &trans   &trans   &trans   &trans   &trans
+                &trans   &trans   &trans   &trans   &trans       &trans   &trans   &trans    &trans   &trans
+                                &trans   &trans      &trans  &trans
+            >;
+        };
+
+        nav_layer {
+            display-name = "Navigation";
+            bindings = <
+                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)           &trans &kp TAB_L  &kp LG(SPACE) &kp LC(UP) &kp TAB_R
+                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH            &tri_app_swap &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &sk GLOBE   &trans  &trans  &trans  &trans                     &tri_win_swap &kp BACK &mt END PG_DN &mt HOME PG_UP &kp FWRD
                                                           &trans &trans        &trans &trans
             >;
         };
 
-        raise_layer {
-            display-name = "Raise";
+        num_layer {
+            display-name = "Number";
             bindings = <
-                &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH                     &kp DELETE   &morph_lpar   &morph_lbkt   &morph_rbkt   &morph_rpar
-                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH   &sk RGUI        &sk RSHFT        &sk LALT       &sk RCTRL
+                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ASTRK                    &trans   &trans   &trans   &trans   &trans
+                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH   &sk RGUI        &sk RSHFT &sk LALT &sk RCTRL
                 &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &trans   &trans          &trans          &sk GLOBE
                                                 &trans  &trans                  &trans  &trans
             >;
         };
-
+        
+        symbol_layer {
+            display-name = "Symbol";
+            bindings = <
+                &kp GRAVE   &kp MINUS   &kp PIPE    &kp UNDER   &kp TILDE       &trans  &kp HASH  &kp DLLR  &kp PRCNT  &
+                &kp SLASH   &kp LPAR    &kp LBKT    &kp LBRC    &kp GT          &sk LCTL  &sk LALT  &sk LSHFT  &sk LGUI &sk MEH
+                &kp BSLH    &kp RPAR    &kp RBKT    &kp RBRC    &kp LT          &sk GLOBE  &kp CARET  &kp AT   &kp AMPS  &trans
+                                                &trans  &trans                  &trans  &trans
+            >;
+        };
+        
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP &trans  &trans   &trans  &trans    &trans
-                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH         &trans  &kp RET  &kp TAB &kp BSPC  &kp DEL
-                &sk GLOBE  &trans  &trans  &trans  &trans                   &trans  &kp LS(RET)  &kp LS(TAB)   &kp LA(BSPC)  &kp LA(DEL)
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP &kp PAUSE_BREAK  &kp CAPS   &trans  &trans    &kp INS
+                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH         &kp ESC  &kp RET   &kp BSPC &kp TAB &kp DEL
+                &sk GLOBE  &kp C_AL_LOCK  &kp FQUIT  &kp EMOJI  &trans                   &kp PSCRN  &kp LS(RET)  &kp LA(BSPC) &kp LS(TAB)  &kp LA(DEL)
                                                 &trans  &trans              &trans  &trans
             >;
         };
 
-        symbol_layer {
-            display-name = "Symbol";
+        sys_layer {
+            display-name = "System";
             bindings = <
-                &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp PIPE                 &trans         &morph_lpar  &morph_lbkt  &morph_rbkt  &morph_rpar
-                &kp MINUS  &kp DLLR  &kp PRCNT  &kp CARET &kp QMARK             &sk MEH          &sk RGUI        &sk RSHFT        &sk LALT       &sk RCTRL
-                &kp PLUS  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR               &trans  &trans   &trans   &trans   &trans
-                                                &trans  &trans                  &trans  &trans
-            >;
-        };
-
-        function_layer {
-            display-name = "Function";
-            bindings = <
-                &kp C_AL_LOCK  &kp FQUIT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR  &kp PAUSE_BREAK &kp F1  &kp F2  &kp F3  &kp F4
-                &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &sk MEH               &kp PSCRN       &kp F5  &kp F6  &kp F7  &kp F8
-                &sk GLOBE &trans &trans &trans &trans                           &kp INS         &kp F9  &kp F10 &kp F11 &kp F12
+                &kp F12 &kp F1  &kp F2  &kp F3  &bootloader                           &bootloader  &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR  
+                &kp F11 &kp F4  &kp F5  &kp F6  &soft_off                     &sk MEH  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL               
+                &kp F10 &kp F7  &kp F8  &kp F9  &trans                  &trans &trans &trans &trans &sk GLOBE                           
                                                     &trans   &trans             &trans  &trans
             >;
         };
