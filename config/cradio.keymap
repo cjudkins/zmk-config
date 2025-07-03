@@ -127,7 +127,7 @@
         };
 
         quad_layer {
-            if-layers = <NAV SYMBOL>;
+            if-layers = <NAV SYM>;
             then-layer = <SYS>;
         };
     };
