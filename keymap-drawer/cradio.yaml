@@ -43,7 +43,7 @@ layers:
   - Cmd+Z
   - {t: ▽, type: trans}
   - Sft+Ctl+TAB
-  - Cmd+SPACE
+  - {t: ▽, type: trans}
   - Ctl+UP
   - Ctl+TAB
   - {t: LCTRL, h: sticky}
@@ -51,7 +51,7 @@ layers:
   - {t: LSHFT, h: sticky}
   - {t: LGUI, h: sticky}
   - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
-  - '&tri_app_swap'
+  - '&tri_app'
   - LEFT
   - DOWN
   - UP
@@ -61,11 +61,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&tri_win_swap'
-  - Cmd+{
+  - '&tri_win'
+  - Cmd+[
   - {t: PG DN, h: END}
   - {t: PG UP, h: HOME}
-  - Cmd+}
+  - Cmd+]
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -112,9 +112,9 @@ layers:
   - '-'
   - '~'
   - {t: ▽, type: trans}
-  - '#'
-  - $
   - '%'
+  - ^
+  - $
   - {t: ▽, type: trans}
   - '>'
   - '{'
@@ -125,14 +125,14 @@ layers:
   - {t: RGUI, h: sticky}
   - {t: RSHFT, h: sticky}
   - {t: LALT, h: sticky}
-  - {t: RCTL, h: sticky}
+  - {t: RCTRL, h: sticky}
   - <
   - '}'
   - ']'
   - )
   - \
   - {t: ▽, type: trans}
-  - ^
+  - '#'
   - '@'
   - '&'
   - {t: GLOBE, h: sticky}
@@ -163,9 +163,9 @@ layers:
   - DEL
   - {t: GLOBE, h: sticky}
   - AL LOCK
-  - Cmd+Opt+ESC
+  - Cmd+Opt+ESCAPE
+  - Cmd+SPACE
   - Ctl+Cmd+SPACE
-  - {t: ▽, type: trans}
   - PSCRN
   - Sft+RET
   - Opt+BSPC
@@ -176,16 +176,16 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   System:
-  - F12
+  - F10
   - F1
   - F2
   - F3
   - '&bootloader'
   - '&bootloader'
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F11
   - F4
   - F5
@@ -196,24 +196,17 @@ layers:
   - {t: RSHFT, h: sticky}
   - {t: LALT, h: sticky}
   - {t: RCTRL, h: sticky}
-  - F10
+  - F12
   - F7
   - F8
   - F9
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BT CLEAR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
   - {t: GLOBE, h: sticky}
   - {type: held}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-combos:
-- p: [0, 1]
-  k: ESC
-- p: [20, 21]
-  k: {t: (, s: <}
-- p: [29, 28]
-  k: {t: ), s: '>'}
