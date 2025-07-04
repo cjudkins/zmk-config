@@ -10,113 +10,6 @@
 #define ADJUST  4
 #define SYS     5
 
-// Tuning
-#define TAPPING_TERM_MS 200
-#define COMBO_TIMEOUT_MS 50
-#define STICKY_TIMEOUT_MS 2000
-
-// Shorthands
-#define TAB_L LS(LC(TAB))     // Switch tab left
-#define TAB_R LC(TAB)         // Switch tab right
-#define BACK LG(LBRC)         // Go Back in history
-#define FWRD LG(RBRC)         // Go Forward in history
-#define FQUIT LG(LA(ESC))     // Force Quit/Task Manager
-#define EXPOSE LC(UP)
-#define EMOJI LC(LG(SPACE))
-#define MEH LA(LC(LEFT_SHIFT))
-
-&sk {
-    release-after-ms = <STICKY_TIMEOUT_MS>;
-    quick-release;
-};
-
-&sl {
-    release-after-ms = <STICKY_TIMEOUT_MS>;
-};
-
-&lt {
-    tapping-term-ms = <120>;
-    quick-tap-ms = <200>;
-};
-
-&soft_off {
-    hold-time-ms = <2000>;
-};
-
-/ {
-    behaviors {
-        morph_period: morph_period {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_comma: morph_comma {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_qmark: morph_qmark {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_lpar: morph_lpar {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LESS_THAN>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_rpar: morph_rpar {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp GREATER_THAN>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_lbkt: morph_lbkt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LEFT_BRACE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_rbkt: morph_rbkt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        morph_shift_caps: morph_shift_caps {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        tri_app_swap: tri_app_swap {
-            compatible = "zmk,behavior-tri-state";
-            label = "App Swapper";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-        };
-        
-        tri_win_swap: tri_win_swap {
-            compatible = "zmk,behavior-tri-state";
-            label = "Window Swapper";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
-        };
-    };
-};
-
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -132,29 +25,127 @@
     };
 };
 
+// Tuning
+#define TAPPING_TERM_MS 200
+#define COMBO_TIMEOUT_MS 50
+#define COMBO_PRIOR_IDLE_MS 50
+#define STICKY_TIMEOUT_MS 2000
+
+// Overrides
+&sk {
+    release-after-ms = <STICKY_TIMEOUT_MS>;
+    quick-release;
+};
+
+&sl {
+    release-after-ms = <STICKY_TIMEOUT_MS>;
+};
+
+&lt {
+    tapping-term-ms = <120>;
+    quick-tap-ms = <200>;
+    flavor = "balanced"; // default "tap-preferred", also "hold-preferred"
+    require-prior-idle-ms = <125>; // default disabled
+};
+
+&soft_off {
+    hold-time-ms = <2000>;
+};
+
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
+    behaviors {
+        mo_dot: morph_period {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_lpar {
-            bindings = <&morph_lpar>;
-            key-positions = <20 21>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
+        mo_comma: morph_comma {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        combo_rpar {
-            bindings = <&morph_rpar>;
-            key-positions = <29 28>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
+        mo_qmark: morph_question {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mo_lpar: morph_left_parenthesis {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mo_rpar: morph_right_parenthesis {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mo_lbkt: morph_left_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp LESS_THAN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mo_rbkt: morph_right_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp GREATER_THAN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mo_sc: morph_shift_caps {
+            compatible = "zmk,behavior-mod-morph";
+            
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        tri_app: tri_app_swap {
+            compatible = "zmk,behavior-tri-state";
+            
+            label = "App Swapper";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+        };
+        
+        tri_win: tri_win_swap {
+            compatible = "zmk,behavior-tri-state";
+            
+            label = "Window Swapper";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
         };
     };
 };
+
+// Shorthands
+#define TAB_L   LS(LC(TAB))         // Switch tab left
+#define TAB_R   LC(TAB)             // Switch tab right
+#define BACK    LG(LEFT_BRACKET)    // Go Back in history
+#define FWRD    LG(RIGHT_BRACKET)   // Go Forward in history
+#define FQUIT   LG(LA(ESCAPE))      // Force Quit/Task Manager
+#define EXPOSE  LC(UP)              // Reveal windows
+#define EMOJI   LC(LG(SPACE))       // Emoji Picker
+#define SPOT    LG(SPACE)           // Spotlight
+#define MEH     LA(LC(LEFT_SHIFT))
 
 / {
     keymap {
@@ -165,18 +156,18 @@
             bindings = <
                 &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
                 &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
-                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &morph_comma    &morph_period   &morph_qmark
-                                &sl NAV   &morph_shift_caps      &lt SYM SPACE  &sl NUM
+                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &mo_comma    &mo_dot   &mo_qmark
+                                &sl NAV   &mo_sc      &lt SYM SPACE  &sl NUM
             >;
         };
 
         nav_layer {
             display-name = "Navigation";
             bindings = <
-                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)           &trans &kp TAB_L  &kp LG(SPACE) &kp LC(UP) &kp TAB_R
-                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH            &tri_app_swap &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &sk GLOBE   &trans  &trans  &trans  &trans                     &tri_win_swap &kp BACK &mt END PG_DN &mt HOME PG_UP &kp FWRD
-                                                          &trans &trans        &trans &trans
+                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)           &trans &kp TAB_L  &trans &kp EXPOSE &kp TAB_R
+                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH            &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &sk GLOBE   &trans  &trans  &trans  &trans                     &tri_win &kp BACK &mt END PG_DN &mt HOME PG_UP &kp FWRD
+                                                          &none &trans         &trans &trans
             >;
         };
 
@@ -186,37 +177,37 @@
                 &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ASTRK                    &trans  &trans   &trans   &trans   &trans
                 &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH   &sk RGUI  &sk RSHFT &sk LALT &sk RCTRL
                 &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &trans  &trans  &trans  &sk GLOBE
-                                                &trans  &trans                  &trans  &trans
+                                                &trans  &trans                  &trans  &none
             >;
         };
         
         symbol_layer {
             display-name = "Symbol";
             bindings = <
-                &kp GRAVE   &kp UNDER   &kp PIPE    &kp MINUS   &kp TILDE       &trans  &kp HASH  &kp DLLR  &kp PRCNT  &trans
-                &kp GT   &kp LBRC    &kp LBKT    &kp LPAR    &kp SLASH          &sk MEH &sk RGUI &sk RSHFT  &sk LALT  &sk RCTL
-                &kp LT   &kp RBRC    &kp RBKT    &kp RPAR    &kp BSLH           &trans  &kp CARET  &kp AT   &kp AMPS  &sk GLOBE
-                                                &trans  &trans                  &trans  &trans
+                &kp GRAVE &kp UNDER  &kp PIPE    &kp MINUS   &kp TILDE          &trans  &kp PRCNT &kp CARET  &kp DLLR  &trans
+                &kp GT   &kp LBRC    &kp LBKT    &kp LPAR    &kp SLASH          &sk MEH &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL
+                &kp LT   &kp RBRC    &kp RBKT    &kp RPAR    &kp BSLH           &trans  &kp HASH  &kp AT     &kp AMPS  &sk GLOBE
+                                                &trans  &trans                  &none  &trans
             >;
         };
         
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP &kp PAUSE_BREAK  &kp CAPS   &trans  &trans    &kp INS
-                &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH         &kp ESC  &kp RET   &kp BSPC &kp TAB &kp DEL
-                &sk GLOBE  &kp C_AL_LOCK  &kp FQUIT  &kp EMOJI  &trans                   &kp PSCRN  &kp LS(RET)  &kp LA(BSPC) &kp LS(TAB)  &kp LA(DEL)
-                                                &trans  &trans              &trans  &trans
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &kp PAUSE_BREAK  &kp CAPS   &trans &trans &kp INS
+                &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp TAB &kp DEL
+                &sk GLOBE  &kp C_AL_LOCK  &kp FQUIT  &kp SPOT &kp EMOJI         &kp PSCRN  &kp LS(RET)  &kp LA(BSPC) &kp LS(TAB)  &kp LA(DEL)
+                                                        &none  &trans           &trans  &none
             >;
         };
 
         sys_layer {
             display-name = "System";
             bindings = <
-                &kp F12 &kp F1  &kp F2  &kp F3  &bootloader                           &bootloader  &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR  
-                &kp F11 &kp F4  &kp F5  &kp F6  &soft_off                     &sk MEH  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL               
-                &kp F10 &kp F7  &kp F8  &kp F9  &trans                  &trans &trans &trans &trans &sk GLOBE                           
-                                                    &trans   &trans             &trans  &trans
+                &kp F10 &kp F1  &kp F2  &kp F3  &bootloader                 &bootloader  &trans  &trans &trans &trans  
+                &kp F11 &kp F4  &kp F5  &kp F6  &soft_off                   &sk MEH  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL               
+                &kp F12 &kp F7  &kp F8  &kp F9  &trans                      &bt BT_CLEAR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &sk GLOBE                           
+                                        &none   &trans                      &none  &trans
             >;
         };
 
