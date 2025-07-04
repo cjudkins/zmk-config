@@ -36,15 +36,15 @@ layers:
   - {t: SPACE, h: Symbol}
   - {t: Number, h: sticky}
   Navigation:
-  - ESC
+  - Cmd+Z
   - Cmd+X
   - Cmd+C
   - Cmd+V
-  - Cmd+Z
-  - {t: ▽, type: trans}
-  - Sft+Ctl+TAB
-  - {t: ▽, type: trans}
+  - Sft+Cmd+Z
   - Ctl+UP
+  - Sft+Ctl+TAB
+  - END
+  - HOME
   - Ctl+TAB
   - {t: LCTRL, h: sticky}
   - {t: LALT, h: sticky}
@@ -63,8 +63,8 @@ layers:
   - {t: ▽, type: trans}
   - '&tri_win'
   - Cmd+[
-  - {t: PG DN, h: END}
-  - {t: PG UP, h: HOME}
+  - PG DN
+  - PG UP
   - Cmd+]
   - {type: held}
   - {t: ▽, type: trans}
@@ -76,11 +76,11 @@ layers:
   - '2'
   - '3'
   - '*'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+Cmd+Z
+  - Cmd+V
+  - Cmd+C
+  - Cmd+X
+  - '&LG(Z)'
   - '-'
   - '4'
   - '5'
@@ -176,31 +176,31 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   System:
-  - F10
+  - '&bootloader'
   - F1
   - F2
   - F3
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '&bootloader'
-  - '&bootloader'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F11
+  - F13
   - F4
   - F5
   - F6
-  - '&soft_off'
+  - F11
   - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
   - {t: RGUI, h: sticky}
   - {t: RSHFT, h: sticky}
   - {t: LALT, h: sticky}
   - {t: RCTRL, h: sticky}
-  - F12
+  - F14
   - F7
   - F8
   - F9
-  - {t: ▽, type: trans}
+  - F10
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
