@@ -201,7 +201,7 @@ layers:
   - F8
   - F9
   - {t: ▽, type: trans}
-  - BT CLEAR
+  - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
