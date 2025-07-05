@@ -80,7 +80,7 @@ layers:
   - Cmd+V
   - Cmd+C
   - Cmd+X
-  - '&LG(Z)'
+  - Cmd+Z
   - '-'
   - '4'
   - '5'
@@ -181,10 +181,10 @@ layers:
   - F2
   - F3
   - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F15
+  - F16
+  - F17
+  - F18
   - '&bootloader'
   - F13
   - F4
