@@ -237,7 +237,7 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &trans   &kp PSCRN &kp CAPS &kp INS &kp PAUSE_BREAK &trans 
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &trans   &kp PSCRN &kp CAPS &kp INS &kp PAUSE_BREAK 
                 &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp DEL &kp TAB 
                 &sk GLOBE  &kp C_AL_LOCK  &kp FQUIT  &kp SPOT &kp EMOJI         &trans   &kp LS(RET)  &kp LA(BSPC) &kp LA(DEL) &kp LS(TAB)
                                                         &trans  &trans           &trans  &trans
