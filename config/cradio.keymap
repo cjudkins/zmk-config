@@ -123,7 +123,6 @@
         tri_app: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
             
-            label = "App Swapper";
             display-name = "App Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
@@ -132,7 +131,6 @@
         tri_win: tri_win_swap {
             compatible = "zmk,behavior-tri-state";
             
-            label = "Window Swapper";
             display-name = "Window Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
@@ -146,7 +144,6 @@
 
         cmb_esc {
             bindings = <&kp ESC>;
-            display-name = "Escape"; 
             key-positions = <0 1>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
         };
@@ -187,11 +184,11 @@
 #define EMOJI   LC(LG(SPACE))       // Emoji Picker
 #define SPOT    LG(SPACE)           // Spotlight
 #define MEH     LA(LC(LEFT_SHIFT))
-#define CUT     LG(X)
-#define COPY    LG(C)
-#define PASTE   LG(V)
-#define UNDO    LG(Z)
-#define REDO    LS(LG(Z))
+#define CUTT     LG(X)
+#define COPYY    LG(C)
+#define PASTEE   LG(V)
+#define UNDOO    LG(Z)
+#define REDOO    LS(LG(Z))
 
 / {
     keymap {
@@ -210,7 +207,7 @@
         nav_layer {
             display-name = "Navigation";
             bindings = <
-                &kp UNDO   &kp CUT   &kp COPY &kp PASTE &kp REDO                &kp EXPOS &kp TAB_L  &kp END &kp HOME &kp TAB_R
+                &kp UNDOO   &kp CUTT   &kp COPYY &kp PASTEE &kp REDOO                &kp EXPOS &kp TAB_L  &kp END &kp HOME &kp TAB_R
                 &sk LCTRL   &sk LALT    &sk LSHFT &sk LGUI  &sk MEH             &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
                 &sk GLOBE   &trans      &trans    &trans    &trans              &tri_win &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
                                                             &trans  &trans      &trans  &trans
@@ -220,7 +217,7 @@
         num_layer {
             display-name = "Number";
             bindings = <
-                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp STAR                    &kp REDO  &kp PASTE  &kp COPY  &kp CUT  &kp UNDO
+                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp STAR                    &kp REDOO  &kp PASTEE  &kp COPYY  &kp CUTT  &kp UNDOO
                 &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                    &sk MEH   &sk RGUI  &sk RSHFT &sk LALT &sk RCTRL
                 &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &trans  &trans  &trans  &sk GLOBE
                                                 &trans  &trans                  &trans  &trans
