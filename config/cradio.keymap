@@ -196,20 +196,20 @@
 };
 
 // Shorthands
-#define TAB_L   LS(LC(TAB))         // Switch tab left
-#define TAB_R   LC(TAB)             // Switch tab right
-#define BACK    LG(LEFT_BRACKET)    // Go Back in history
-#define FWRD    LG(RIGHT_BRACKET)   // Go Forward in history
-#define FQUIT   LG(LA(ESCAPE))      // Force Quit/Task Manager
-#define EXPOS  LC(UP)              // Reveal windows
-#define EMOJI   LC(LG(SPACE))       // Emoji Picker
-#define SPOT    LG(SPACE)           // Spotlight
-#define MEH     LA(LC(LEFT_SHIFT))
-#define CUTT     LG(X)
-#define COPYY    LG(C)
-#define PASTEE   LG(V)
-#define UNDOO    LG(Z)
-#define REDOO    LS(LG(Z))
+#define TAB_L     LS(LC(TAB))         // Switch tab left
+#define TAB_R     LC(TAB)             // Switch tab right
+#define BACK      LG(LEFT_BRACKET)    // Go Back in history
+#define FWRD      LG(RIGHT_BRACKET)   // Go Forward in history
+#define FQUIT     LG(LA(ESCAPE))      // Force Quit/Task Manager
+#define EXPOS     LC(UP)              // Reveal windows
+#define EMOJI     LC(LG(SPACE))       // Emoji Picker
+#define SPOT      LG(SPACE)           // Spotlight
+#define MEH       LA(LC(LEFT_SHIFT))
+#define CUTT      LG(X)             // These are already defined internally,
+#define COPYY     LG(C)             // hence the dumb names
+#define PASTEE    LG(V)
+#define UNDOO     LG(Z)
+#define REDOO     LS(LG(Z))
 
 / {
     keymap {
@@ -228,9 +228,9 @@
         nav_layer {
             display-name = "Navigation";
             bindings = <
-                &kp UNDOO   &kp CUTT   &kp COPYY &kp PASTEE &kp REDOO           &kp EXPOS &kp TAB_L  &kp END &kp HOME &kp TAB_R
-                &sk LCTRL   &sk LALT    &sk LSHFT &sk LGUI  &sk MEH             &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &sk GLOBE   &trans      &trans    &trans    &trans              &tri_win &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
+                  &kp UNDOO   &kp CUTT    &kp COPYY   &kp PASTEE  &kp REDOO           &kp EXPOS &kp TAB_L  &kp END &kp HOME &kp TAB_R
+                  &sk LCTRL   &sk LALT    &sk LSHFT   &sk LGUI    &sk MEH             &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                  &trans      &trans      &trans      &trans      &sk GLOBE             &tri_win &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
                                                             &trans  &trans      &trans  &trans
             >;
         };
