@@ -56,6 +56,7 @@
     behaviors {
         mo_dot: morph_period {
             compatible = "zmk,behavior-mod-morph";
+            display-name = "Period - Colon"; 
             
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
@@ -122,6 +123,7 @@
             compatible = "zmk,behavior-tri-state";
             
             label = "App Swapper";
+            display-name = "App Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
@@ -130,8 +132,34 @@
             compatible = "zmk,behavior-tri-state";
             
             label = "Window Swapper";
+            display-name = "Window Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        cmb_esc {
+            bindings = <&kp ESC>;
+            display-name = "Escape"; 
+            key-positions = <0 1>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        cmb_lpar {
+            bindings = <&morph_lpar>;
+            key-positions = <20 21>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+
+        cmb_rpar {
+            bindings = <&morph_rpar>;
+            key-positions = <29 28>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
         };
     };
 };
