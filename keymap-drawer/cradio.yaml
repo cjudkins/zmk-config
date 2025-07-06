@@ -146,11 +146,11 @@ layers:
   - NEXT
   - VOL UP
   - PP
-  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - PSCRN
   - CAPS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - INS
+  - PAUSE BREAK
   - {t: LCTRL, h: sticky}
   - {t: LALT, h: sticky}
   - {t: LSHFT, h: sticky}
@@ -159,18 +159,18 @@ layers:
   - ESC
   - RET
   - BSPC
-  - TAB
   - DEL
+  - TAB
   - {t: GLOBE, h: sticky}
   - AL LOCK
   - Cmd+Opt+ESCAPE
   - Cmd+SPACE
   - Ctl+Cmd+SPACE
-  - PSCRN
+  - {t: ▽, type: trans}
   - Sft+RET
   - Opt+BSPC
-  - Sft+TAB
   - Opt+DEL
+  - Sft+TAB
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -213,7 +213,11 @@ layers:
 combos:
 - p: [0, 1]
   k: ESC
+- p: [10, 11]
+  k: '-'
+- p: [18, 19]
+  k: /
 - p: [20, 21]
-  k: '&morph_lpar'
-- p: [29, 28]
-  k: '&morph_rpar'
+  k: {t: (, s: '{'}
+- p: [28, 29]
+  k: {t: ), s: '}'}
