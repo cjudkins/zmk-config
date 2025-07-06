@@ -210,3 +210,10 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
+- p: [20, 21]
+  k: '&morph_lpar'
+- p: [29, 28]
+  k: '&morph_rpar'
