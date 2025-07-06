@@ -113,6 +113,7 @@
 
         mo_sc: morph_shift_caps {
             compatible = "zmk,behavior-mod-morph";
+            display-name = "Shift-Caps"; 
             
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&caps_word>;
@@ -149,16 +150,28 @@
             key-positions = <0 1>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
         };
+        
+        cmb_mins {
+            bindings = <&kp MINUS>;
+            key-positions = <10 11>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
+        
+        cmb_slsh {
+            bindings = <&kp SLASH>;
+            key-positions = <18 19>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+        };
 
         cmb_lpar {
-            bindings = <&morph_lpar>;
+            bindings = <&mo_lpar>;
             key-positions = <20 21>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
         };
 
         cmb_rpar {
-            bindings = <&morph_rpar>;
-            key-positions = <29 28>;
+            bindings = <&mo_rpar>;
+            key-positions = <28 29>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
         };
     };
@@ -170,10 +183,15 @@
 #define BACK    LG(LEFT_BRACKET)    // Go Back in history
 #define FWRD    LG(RIGHT_BRACKET)   // Go Forward in history
 #define FQUIT   LG(LA(ESCAPE))      // Force Quit/Task Manager
-#define EXPOSE  LC(UP)              // Reveal windows
+#define EXPOS  LC(UP)              // Reveal windows
 #define EMOJI   LC(LG(SPACE))       // Emoji Picker
 #define SPOT    LG(SPACE)           // Spotlight
 #define MEH     LA(LC(LEFT_SHIFT))
+#define CUT     LG(X)
+#define COPY    LG(C)
+#define PASTE   LG(V)
+#define UNDO    LG(Z)
+#define REDO    LS(LG(Z))
 
 / {
     keymap {
@@ -192,20 +210,20 @@
         nav_layer {
             display-name = "Navigation";
             bindings = <
-                &kp LG(Z)   &kp LG(X)   &kp LG(C) &kp LG(V) &kp LS(LG(Z))     &kp EXPOSE &kp TAB_L  &kp END &kp HOME &kp TAB_R
-                &sk LCTRL   &sk LALT    &sk LSHFT &sk LGUI  &sk MEH            &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &sk GLOBE   &trans      &trans    &trans    &trans                     &tri_win &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
-                                                            &none  &trans         &trans &trans
+                &kp UNDO   &kp CUT   &kp COPY &kp PASTE &kp REDO                &kp EXPOS &kp TAB_L  &kp END &kp HOME &kp TAB_R
+                &sk LCTRL   &sk LALT    &sk LSHFT &sk LGUI  &sk MEH             &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &sk GLOBE   &trans      &trans    &trans    &trans              &tri_win &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
+                                                            &trans  &trans      &trans  &trans
             >;
         };
 
         num_layer {
             display-name = "Number";
             bindings = <
-                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ASTRK                    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)
-                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH                    &sk MEH   &sk RGUI  &sk RSHFT &sk LALT &sk RCTRL
+                &kp PLUS   &kp N1  &kp N2  &kp N3  &kp STAR                    &kp REDO  &kp PASTE  &kp COPY  &kp CUT  &kp UNDO
+                &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                    &sk MEH   &sk RGUI  &sk RSHFT &sk LALT &sk RCTRL
                 &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &trans  &trans  &trans  &sk GLOBE
-                                                &trans  &trans                  &trans  &none
+                                                &trans  &trans                  &trans  &trans
             >;
         };
         
@@ -215,17 +233,17 @@
                 &kp GRAVE &kp UNDER  &kp PIPE    &kp MINUS   &kp TILDE          &trans  &kp PRCNT &kp CARET  &kp DLLR  &trans
                 &kp GT   &kp LBRC    &kp LBKT    &kp LPAR    &kp SLASH          &sk MEH &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL
                 &kp LT   &kp RBRC    &kp RBKT    &kp RPAR    &kp BSLH           &trans  &kp HASH  &kp AT     &kp AMPS  &sk GLOBE
-                                                &trans  &trans                  &none  &trans
+                                                &trans  &trans                  &trans  &trans
             >;
         };
         
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &kp PAUSE_BREAK  &kp CAPS   &trans &trans &kp INS
-                &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp TAB &kp DEL
-                &sk GLOBE  &kp C_AL_LOCK  &kp FQUIT  &kp SPOT &kp EMOJI         &kp PSCRN  &kp LS(RET)  &kp LA(BSPC) &kp LS(TAB)  &kp LA(DEL)
-                                                        &none  &trans           &trans  &none
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &trans   &kp PSCRN &kp CAPS &kp INS &kp PAUSE_BREAK &trans 
+                &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp DEL &kp TAB 
+                &sk GLOBE  &kp C_AL_LOCK  &kp FQUIT  &kp SPOT &kp EMOJI         &trans   &kp LS(RET)  &kp LA(BSPC) &kp LA(DEL) &kp LS(TAB)
+                                                        &trans  &trans           &trans  &trans
             >;
         };
 
@@ -235,7 +253,7 @@
                 &bootloader &kp F1  &kp F2  &kp F3  &kp F12                 &kp F15  &kp F16  &kp F17 &kp F18 &bootloader  
                 &kp F13 &kp F4  &kp F5  &kp F6  &kp F11                   &sk MEH  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL               
                 &kp F14 &kp F7  &kp F8  &kp F9  &kp F10                      &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &sk GLOBE                           
-                                        &none   &trans                      &none  &trans
+                                        &trans   &trans                      &trans  &trans
             >;
         };
 
