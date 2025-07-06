@@ -96,11 +96,11 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: GLOBE, h: sticky}
+  - {t: (, s: '{'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ), s: '}'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -111,15 +111,15 @@ layers:
   - '|'
   - '-'
   - '~'
-  - {t: ▽, type: trans}
+  - '&'
+  - '#'
   - '%'
   - ^
   - $
-  - {t: ▽, type: trans}
   - '>'
   - '{'
-  - '['
-  - (
+  - {t: '[', s: <}
+  - {t: (, s: '{'}
   - /
   - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
   - {t: RGUI, h: sticky}
@@ -128,14 +128,14 @@ layers:
   - {t: RCTRL, h: sticky}
   - <
   - '}'
-  - ']'
-  - )
+  - {t: ']', s: '>'}
+  - {t: ), s: '}'}
   - \
-  - {t: ▽, type: trans}
-  - '#'
-  - '@'
-  - '&'
   - {t: GLOBE, h: sticky}
+  - '@'
+  - ;
+  - ':'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -161,11 +161,11 @@ layers:
   - BSPC
   - DEL
   - TAB
-  - {t: GLOBE, h: sticky}
   - AL LOCK
   - Cmd+Opt+ESCAPE
-  - Cmd+SPACE
   - Ctl+Cmd+SPACE
+  - Cmd+SPACE
+  - {t: GLOBE, h: sticky}
   - {t: ▽, type: trans}
   - Sft+RET
   - Opt+BSPC
@@ -201,18 +201,20 @@ layers:
   - F8
   - F9
   - F10
-  - BT CLR
+  - {t: GLOBE, h: sticky}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
-  - {t: GLOBE, h: sticky}
+  - BT CLR
   - {type: held}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
 combos:
 - p: [0, 1]
-  k: ESC
+  k: ESCAPE
+- p: [8, 9]
+  k: ESCAPE
 - p: [10, 11]
   k: '-'
 - p: [18, 19]
