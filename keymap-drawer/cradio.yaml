@@ -116,7 +116,7 @@ layers:
   - '%'
   - ^
   - $
-  - '>'
+  - <
   - '{'
   - {t: '[', s: <}
   - {t: (, s: '{'}
@@ -126,7 +126,7 @@ layers:
   - {t: RSHFT, h: sticky}
   - {t: LALT, h: sticky}
   - {t: RCTRL, h: sticky}
-  - <
+  - '>'
   - '}'
   - {t: ']', s: '>'}
   - {t: ), s: '}'}
