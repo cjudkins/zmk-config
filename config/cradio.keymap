@@ -221,12 +221,12 @@
             display-name = "Symbol";
             bindings = <
                 &kp GRAVE &kp UNDER  &kp PIPE    &kp MINUS   &kp TILDE          &kp AMPS  &kp HASH    &kp PRCNT   &kp CARET   &kp DLLR
-                &kp GT   &kp LBRC    &mo_lbkt    &mo_lpar    &kp SLASH          &sk MEH   &sk RGUI    &sk RSHFT   &sk LALT    &sk RCTRL
-                &kp LT   &kp RBRC    &mo_rbkt    &mo_rpar    &kp BSLH           &sk GLOBE &kp AT      &kp SEMI    &kp COLON   &trans  
+                &kp LT   &kp LBRC    &mo_lbkt    &mo_lpar    &kp SLASH          &sk MEH   &sk RGUI    &sk RSHFT   &sk LALT    &sk RCTRL
+                &kp GT   &kp RBRC    &mo_rbkt    &mo_rpar    &kp BSLH           &sk GLOBE &kp AT      &kp SEMI    &kp COLON   &trans  
                                                 &trans  &trans                  &trans  &trans
             >;
         };
-        
+
         adjust_layer {
             display-name = "Adjust";
             bindings = <
