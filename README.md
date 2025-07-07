@@ -1,8 +1,14 @@
 # Windy's zmk-config
 
+Here's my keymap! It's been through hundreds of iterations and I'm sure there'll be hundreds more to come.
+
+I'm an artist and game developer, frequently switching between Windows, macOS, and my iPad. I'm usually using a stylus or pointing device with my left hand, leaving the right hand resting on the keyboard. That being said, the layout is pretty ambivalent and doesn't overly favor one hand over the other.
+
+The layout and shortcuts are macOS-centric. I use PowerToys to remap them to their Windows equivalent (but going the other way around would probably work just as well).
+
 ## Keymap
 
-- Layers are laid out to reduce the need for chording -- mods are always accessible but not overly relied on
+- Convenience shortcuts reduce the need for chording -- mods are accessible across all non-base layers but shortcuts cover common uses
 - Mod-morphs are used create shifted characters that make more sense than traditional layouts (e.g. `(` is shifted to `{`, `,` is shifted to `;`, e.t.c.)
 - Thumb keys are consistent across all layers
 - Thumb shift is used for shifting alpha characters, and homerow Shift is for keyboard shortcuts
@@ -26,9 +32,19 @@ When the left outer thumb key and the right inner thumb key (Navigation and Symb
 
 ### Base Layer (Layer 0)
 
-The base layout is Colemak-DH. I use ISO-style punctuation, so `.` and `,` will become `;` and `:` respectively when shifted. `/` has been replaced by `?`, which becomes `!` when shifted. Parens `()`, Hyphen `-`, and Slash `/` are available through combos, as well as on symbol and number layers.
+The base layout is Colemak-DH. I've replaced `/` with `?`, which becomes `!` when shifted. Hyphen `-` and Slash `/` are available on the Symbol and Number layers.
 
-Combos are available by pressing the two outermost keys on each row. For example, by pressing the two keys in the upper right or left corner (`qw` or `y'`), you get Escape.
+#### Mod-Morphs
+
+I use ISO-style punctuation, so e.g. `.` and `,` will become `;` and `:` respectively when shifted. This came about when I realized having angle brackets on the base layer made absolutely no sense, so I wanted to come up with combinations that felt more intuitive.
+
+| Symbol | Shifted |
+| ------ | ------- |
+| ,      | ;       |
+| .      | :       |
+| ?      | !       |
+| ( )    | { }     |
+| [ ]    | < >     |
 
 ### Navigation Layer (Layer 1)
 
@@ -47,10 +63,10 @@ I'm not a programmer or a hardcore Vim-user, so I'm sure this layer isn't as eff
 
 ### Adjust Layer (Layer 4)
 
-The Adjust layer provides access to editing keys Return, Backspace, Delete, Tab, as well as common mod combinations (e.g. Opt+Backspace to delete a full word). Sticky mods as always on the left side. 
+The Adjust layer provides access to editing keys Return, Backspace, Delete, Tab, as well as common mod combinations (e.g. `Opt+Backspace` to delete a full word). Sticky mods as always on the left side. 
 
-There's also convenience shortcuts for things like Spotlight, Force Quit, Screen Lock, media controls, and the Emoji picker
+There's also convenience shortcuts for OS-features like Spotlight, Force Quit, Screen Lock, media controls, and the Emoji picker
 
 ### System Layer (Layer 5)
- 
-The System layer provides access to Function keys, as well as hardware features such as bluetooth. 
+
+The System layer provides access to Function keys, as well as hardware features such as bluetooth. I've added extra function keys wherever there was an open spot -- they basically act as configurable hotkeys in whatever software I'm using
