@@ -254,8 +254,7 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#Navigation">
 <text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 70%">Navigation</tspan></text>
-</a><text x="0" y="24" class="key hold">sticky</text>
-</g>
+</a></g>
 <g transform="translate(279, 245) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">LSHIFT</text>
@@ -272,8 +271,7 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#Number">
 <text x="0" y="0" class="key tap layer-activator">Number</text>
-</a><text x="0" y="24" class="key hold">sticky</text>
-</g>
+</a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="51" width="28" height="26" class="combo"/>
 <text x="56" y="64" class="combo tap">ESCAPE</text>

@@ -31,10 +31,10 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - {t: Navigation, h: sticky}
+  - Navigation
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
   - {t: SPACE, h: Symbol}
-  - {t: Number, h: sticky}
+  - Number
   Navigation:
   - Cmd+Z
   - Cmd+X
