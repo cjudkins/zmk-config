@@ -164,34 +164,6 @@
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
-        
-        cmb_mins {
-            bindings = <&kp MINUS>;
-            key-positions = <10 11>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>; 
-        };
-        
-        cmb_slsh {
-            bindings = <&kp SLASH>;
-            key-positions = <18 19>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>; 
-        };
-
-        cmb_lpar {
-            bindings = <&mo_lpar>;
-            key-positions = <20 21>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>; 
-        };
-
-        cmb_rpar {
-            bindings = <&mo_rpar>;
-            key-positions = <28 29>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>; 
-        };
     };
 };
 
