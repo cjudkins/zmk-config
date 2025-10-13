@@ -60,16 +60,16 @@
         mo_dot: morph_period {
             compatible = "zmk,behavior-mod-morph";
             display-name = "Period - Colon"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mo_comma: morph_comma {
-            compatible = "zmk,behavior-mod-morph";            
+            compatible = "zmk,behavior-mod-morph";
             display-name = "Comma - Semicolon"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -78,7 +78,7 @@
         mo_qmark: morph_question {
             compatible = "zmk,behavior-mod-morph";
             display-name = "Question - Exclamation"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -87,7 +87,7 @@
         mo_lpar: morph_left_parenthesis {
             compatible = "zmk,behavior-mod-morph";
             display-name = "Left Parens - Brace"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -96,7 +96,7 @@
         mo_rpar: morph_right_parenthesis {
             compatible = "zmk,behavior-mod-morph";
             display-name = "Right Parens - Brace"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -105,7 +105,7 @@
         mo_lbkt: morph_left_bracket {
             compatible = "zmk,behavior-mod-morph";
             display-name = "Left Bracket - Angle Bracket"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LESS_THAN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -114,7 +114,7 @@
         mo_rbkt: morph_right_bracket {
             compatible = "zmk,behavior-mod-morph";
             display-name = "Right Bracket - Angle Bracket"; 
-            
+
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp GREATER_THAN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -136,7 +136,7 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
-        
+
         tri_win: tri_win_swap {
             compatible = "zmk,behavior-tri-state";
             
@@ -157,7 +157,7 @@
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
-        
+
         cmb_esc_r {
             bindings = <&kp ESCAPE>;
             key-positions = <8 9>;
@@ -186,14 +186,19 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-        
+
         default_layer {
             display-name = "Base";
             bindings = <
-                &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
-                &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
-                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &mo_comma    &mo_dot   &mo_qmark
-                                &mo NAV   &mo_sc      &lt SYM SPACE  &mo NUM
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+       &kp Q         &kp W         &kp F         &kp P         &kp B           &kp J         &kp L         &kp U         &kp Y        &kp APOS
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+       &kp A         &kp R         &kp S         &kp T         &kp G           &kp M         &kp N         &kp E         &kp I         &kp O
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+       &kp Z         &kp X         &kp C         &kp D         &kp V           &kp K         &kp H       &mo_comma      &mo_dot      &mo_qmark
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                                &mo NAV        &mo_sc      &lt SYM SPACE    &mo NUM
+//                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
             >;
         };
 
@@ -212,17 +217,17 @@
             bindings = <
                 &kp PLUS   &kp N1  &kp N2  &kp N3  &kp STAR                    &kp REDOO  &kp PASTEE  &kp COPYY  &kp CUTT  &kp UNDOO
                 &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH                    &sk MEH   &sk RGUI  &sk RSHFT &sk LALT &sk RCTRL
-                &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &sk GLOBE &mo_lpar  &trans  &trans   &mo_rpar  
+                &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                       &sk GLOBE &mo_lpar  &trans  &trans   &mo_rpar
                                                 &trans  &trans                  &trans  &trans
             >;
         };
-        
+
         symbol_layer {
             display-name = "Symbol";
             bindings = <
                 &kp GRAVE &kp UNDER  &kp PIPE    &kp MINUS   &kp TILDE          &kp AMPS  &kp HASH    &kp PRCNT   &kp CARET   &kp DLLR
                 &kp LT   &kp LBRC    &mo_lbkt    &mo_lpar    &kp SLASH          &sk MEH   &sk RGUI    &sk RSHFT   &sk LALT    &sk RCTRL
-                &kp GT   &kp RBRC    &mo_rbkt    &mo_rpar    &kp BSLH           &sk GLOBE &kp AT      &kp SEMI    &kp COLON   &trans  
+                &kp GT   &kp RBRC    &mo_rbkt    &mo_rpar    &kp BSLH           &sk GLOBE &kp AT      &kp SEMI    &kp COLON   &trans
                                                 &trans  &trans                  &trans  &trans
             >;
         };
@@ -230,7 +235,7 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &trans   &kp PSCRN &kp CAPS &kp INS &kp PAUSE_BREAK 
+                &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &kp CAPS &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS
                 &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp DEL &kp TAB 
                 &kp C_AL_LOCK  &kp FQUIT &kp EMOJI  &kp SPOT  &sk GLOBE         &trans   &kp LS(RET)  &kp LA(BSPC) &kp LA(DEL) &kp LS(TAB)
                                                         &trans  &trans           &trans  &trans
@@ -240,9 +245,9 @@
         sys_layer {
             display-name = "System";
             bindings = <
-                &bootloader &kp F1  &kp F2  &kp F3  &kp F12                 &kp F15  &kp F16  &kp F17 &kp F18 &bootloader  
-                &kp F13 &kp F4  &kp F5  &kp F6  &kp F11                    &sk MEH  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL               
-                &kp F14 &kp F7  &kp F8  &kp F9  &kp F10                    &sk GLOBE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR                           
+                &kp F16 &kp F1  &kp F2  &kp F3  &kp F12                     &kp F19  &kp F20  &kp F21 &kp F22 &kp F23
+                &kp F17 &kp F4  &kp F5  &kp F6  &kp F11                     &sk MEH  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL
+                &kp F18 &kp F7  &kp F8  &kp F9  &kp F10                     &sk GLOBE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
                                         &trans   &trans                      &trans  &trans
             >;
         };
