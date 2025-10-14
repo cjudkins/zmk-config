@@ -41,10 +41,6 @@
     quick-release;
 };
 
-&sl {
-    release-after-ms = <STICKY_TIMEOUT_MS>;
-};
-
 &lt {
     tapping-term-ms = <120>;
     quick-tap-ms = <200>;
@@ -206,13 +202,13 @@
             display-name = "Navigation";
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                  &kp UNDOO   &kp CUTT    &kp COPYY   &kp PASTEE  &kp REDOO           &kp EXPOS &kp TAB_L  &kp END &kp HOME &kp TAB_R
+     &kp UNDOO      &kp CUTT     &kp COPYY    &kp PASTEE     &kp REDOO       &kp EXPOS     &kp TAB_L      &kp END       &kp HOME     &kp TAB_R
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                  &sk LCTRL   &sk LALT    &sk LSHFT   &sk LGUI    &sk MEH             &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT
+     &sk LCTRL      &sk LALT     &sk LSHFT     &sk LGUI       &sk MEH         &tri_app     &kp LEFT      &kp DOWN        &kp UP      &kp RIGHT
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                  &trans      &trans      &trans      &trans      &sk GLOBE             &tri_win &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
+      &trans         &trans       &trans        &trans       &sk GLOBE        &tri_win     &kp BACK      &kp PG_DN     &kp PG_UP      &kp FWRD
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                                            &trans  &trans      &trans  &trans
+                                                &trans        &trans           &trans        &trans
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
 
             >;
