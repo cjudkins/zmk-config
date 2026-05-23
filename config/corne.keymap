@@ -187,24 +187,21 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        display-name = "Base";
                         bindings = <
-   &trans   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp APOS    &trans
-   &trans &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O &trans
-   &trans &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &mo_comma &mo_dot &mo_qmark &trans
-                  &trans &mo NAV &mo_sc    &lt SYM SPACE &mo NUM &mo SYS
+//╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
+      &trans         &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS      &trans
+//├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
+      &trans         &kp A         &kp R        &kp S         &kp T        &kp G           &kp M         &kp N         &kp E         &kp I        &kp O       &trans
+//├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
+      &trans         &kp Z         &kp X        &kp C         &kp D        &kp V           &kp K         &kp H       &mo_comma      &mo_dot     &mo_qmark     &trans
+//╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
+                                                &trans       &mo NAV       &mo_sc       &lt SYM SPACE   &mo NUM        &mo SYS
+//                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 nav_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        display-name = "Navigation";
                         bindings = <
    &trans  &kp CUTT  &kp UNDOO       &kp COPYY       &kp PASTEE       &kp REDOO       &kp EXPOS         &kp TAB_L   &kp END   &kp HOME &kp TAB_R  &trans
    &trans  &sk LCTRL &sk LALT &sk LSHFT &sk LGUI &sk MEH   &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
@@ -214,11 +211,7 @@
                 };
 
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        display-name = "Number"
                         bindings = <
    &trans  &kp PLUS &kp N1 &kp N2 &kp N3 &kp STAR   &kp REDOO &kp PASTEE  &kp COPYY &kp CUTT &kp UNDOO &trans
    &trans &kp MINUS   &kp N4 &kp N5   &kp N6   &kp SLASH      &sk MEH &sk RGUI &sk RSHIFT  &sk LALT &sk RCTRL &trans
