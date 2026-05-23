@@ -24,11 +24,6 @@
             if-layers = <NAV NUM>;
             then-layer = <ADJUST>;
         };
-
-        quad_layer {
-            if-layers = <NAV SYM>;
-            then-layer = <SYS>;
-        };
     };
 };
 
@@ -152,14 +147,14 @@
 
         cmb_esc_l {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         cmb_esc_r {
             bindings = <&kp ESCAPE>;
-            key-positions = <8 9>;
+            key-positions = <9 10>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
