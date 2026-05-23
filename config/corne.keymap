@@ -186,11 +186,11 @@
                         display-name = "Base";
                         bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-      &trans         &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS      &trans
+      &kp ESC        &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS      &kp ESC
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans         &kp A         &kp R        &kp S         &kp T        &kp G           &kp M         &kp N         &kp E         &kp I        &kp O       &trans
+     &kp LSHFT       &kp A         &kp R        &kp S         &kp T        &kp G           &kp M         &kp N         &kp E         &kp I        &kp O      &kp RSHFT
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans         &kp Z         &kp X        &kp C         &kp D        &kp V           &kp K         &kp H       &mo_comma      &mo_dot     &mo_qmark     &trans
+     &kp LCTRL       &kp Z         &kp X        &kp C         &kp D        &kp V           &kp K         &kp H       &mo_comma      &mo_dot     &mo_qmark    &kp RCTRL
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &mo NAV       &mo_sc       &lt SYM SPACE   &mo NUM        &mo SYS
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -221,7 +221,7 @@
             bindings = <
            &trans     &kp GRAVE &kp TILDE  &kp UNDER    &kp MINUS   &kp PIPE          &kp AMPS  &kp HASH    &kp PRCNT   &kp CARET   &kp DLLR &trans
              &trans   &kp LT   &kp LBRC    &mo_lbkt    &mo_lpar    &kp SLASH          &sk MEH   &sk RGUI    &sk RSHFT   &sk LALT    &sk RCTRL &trans
-            &trans    &kp GT   &kp RBRC    &mo_rbkt    &mo_rpar    &kp BSLH           &sk GLOBE &kp AT      &kp SEMI    &kp COLON   &trans &trans
+            &trans    &kp GT   &kp RBRC    &mo_rbkt    &mo_rpar    &kp BSLH           &sk CAPS &kp AT      &kp SEMI    &kp COLON   &trans &trans
                                             &trans    &trans  &trans                  &trans  &trans &trans
             >;
         };
@@ -231,7 +231,7 @@
             bindings = <
             &trans    &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &kp CAPS &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS &trans
            &trans     &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp DEL &kp TAB &trans
-             &trans   &kp C_AL_LOCK  &kp FQUIT &kp EMOJI  &kp SPOT  &sk GLOBE         &trans   &kp LS(RET)  &kp LA(BSPC) &kp LA(DEL) &kp LS(TAB) &trans
+             &trans   &kp C_AL_LOCK  &kp FQUIT &kp EMOJI  &kp SPOT  &sk CAPS         &trans   &kp LS(RET)  &kp LA(BSPC) &kp LA(DEL) &kp LS(TAB) &trans
                                                      &trans   &trans  &trans           &trans  &trans &trans
             >;
         };
