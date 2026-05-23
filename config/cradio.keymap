@@ -30,8 +30,8 @@
 };
 
 // Tuning
-#define TAPPING_TERM_MS 200
-#define COMBO_TIMEOUT_MS 50
+#define TAPPING_TERM_MS 175
+#define COMBO_TIMEOUT_MS 40
 #define COMBO_PRIOR_IDLE_MS 50
 #define STICKY_TIMEOUT_MS 2000
 
@@ -55,7 +55,7 @@
     behaviors {
         mo_dot: morph_period {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Period - Colon"; 
+            display-name = "Period - Colon";
 
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
@@ -64,7 +64,7 @@
 
         mo_comma: morph_comma {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Comma - Semicolon"; 
+            display-name = "Comma - Semicolon";
 
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
@@ -73,7 +73,7 @@
 
         mo_qmark: morph_question {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Question - Exclamation"; 
+            display-name = "Question - Exclamation";
 
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
@@ -82,7 +82,7 @@
 
         mo_lpar: morph_left_parenthesis {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Left Parens - Brace"; 
+            display-name = "Left Parens - Brace";
 
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
@@ -91,7 +91,7 @@
 
         mo_rpar: morph_right_parenthesis {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Right Parens - Brace"; 
+            display-name = "Right Parens - Brace";
 
             #binding-cells = <0>;
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
@@ -100,7 +100,7 @@
 
         mo_lbkt: morph_left_bracket {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Left Bracket - Angle Bracket"; 
+            display-name = "Left Bracket - Angle Bracket";
 
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LESS_THAN>;
@@ -109,7 +109,7 @@
 
         mo_rbkt: morph_right_bracket {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Right Bracket - Angle Bracket"; 
+            display-name = "Right Bracket - Angle Bracket";
 
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp GREATER_THAN>;
@@ -118,8 +118,8 @@
 
         mo_sc: morph_shift_caps {
             compatible = "zmk,behavior-mod-morph";
-            display-name = "Shift-Caps"; 
-            
+            display-name = "Shift-Caps";
+
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
@@ -127,7 +127,7 @@
 
         tri_app: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
-            
+
             display-name = "App Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
@@ -135,7 +135,7 @@
 
         tri_win: tri_win_swap {
             compatible = "zmk,behavior-tri-state";
-            
+
             display-name = "Window Swapper";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
@@ -243,7 +243,7 @@
             display-name = "Adjust";
             bindings = <
                 &kp C_VOL_DN  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP &kp C_PP     &kp CAPS &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS
-                &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp DEL &kp TAB 
+                &sk LCTRL  &sk LALT    &sk LSHFT  &sk LGUI &sk MEH              &kp ESC  &kp RET   &kp BSPC &kp DEL &kp TAB
                 &kp C_AL_LOCK  &kp FQUIT &kp EMOJI  &kp SPOT  &sk GLOBE         &trans   &kp LS(RET)  &kp LA(BSPC) &kp LA(DEL) &kp LS(TAB)
                                                         &trans  &trans           &trans  &trans
             >;
