@@ -210,7 +210,7 @@
    &trans  &kp UNDOO   &kp CUTT       &kp COPYY       &kp PASTEE       &kp REDOO       &kp EXPOS         &kp TAB_L   &kp END   &kp HOME &kp TAB_R  &trans
    &trans  &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH   &tri_app &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
    &trans   &trans   &trans &trans  &trans  &sk CAPS   &tri_win  &kp BACK  &kp PG_DN   &kp PG_UP   &kp FWRD  &trans
-                                    &trans     &ntrans       &trans      &trans  &trans   &trans
+                                    &trans     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
 
