@@ -8,6 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// Left/Right Side Keys
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29    // Left-hand keys.
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35  // Right-hand keys.
+#define THUMBS_L 36 37 38
+#define THUMBS_R 39 40 41
+
 // Layers
 #define BASE    0
 #define NAV     1
@@ -138,6 +144,7 @@
             bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
         };
 
+        // Sticky when tapped but not when held
         hm: homerow_mod {
             compatible = "zmk,behavior-hold-tap";
 
@@ -145,6 +152,36 @@
             #binding-cells = <2>;
             tapping-term-ms = <120>;
             bindings = <&kp>, <&sk>;
+        };
+
+        // urob's timeless
+        // https://github.com/urob/zmk-config#timeless-homerow-mods
+        tlhml: timeless_homerow_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Timeless Homerow Mod";
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < KEYS_R >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+
+        tlhmr: timeless_homerow_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Timeless Homerow Mod";
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < KEYS_L >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
         };
     };
 };
@@ -193,11 +230,11 @@
                         display-name = "Base";
                         bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-      &kp ESC        &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS      &kp ESC
+      &none        &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS      &none
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-     &kp LSHFT       &kp A         &kp R        &kp S         &kp T        &kp G           &kp M         &kp N         &kp E         &kp I        &kp O      &kp RSHFT
+     &none       &tlhml LCTRL A         &tlhml LALT  R        &tlhml LSHIFT S         &tlhml LGUI T        &tlhml MEH G           &tlhmr MEH M         &tlhmr RGUI N         &tlhmr RSHIFT E         &tlhmr LALT I        &tlhmr RCTRL O      &none
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-     &kp LCTRL       &kp Z         &kp X        &kp C         &kp D        &kp V           &kp K         &kp H       &mo_comma      &mo_dot     &mo_qmark    &kp RCTRL
+     &none       &kp Z         &kp X        &kp C         &kp D        &kp V           &kp K         &kp H       &mo_comma      &mo_dot     &mo_qmark    &none
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &mo SYM       &mo NAV       &mo_sc       &lt SYM SPACE   &mo NUM        &mo SYS
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
