@@ -107,10 +107,10 @@ layers:
   - {type: held}
   Symbol:
   - '`'
-  - _
-  - '|'
-  - '-'
   - '~'
+  - _
+  - '-'
+  - '|'
   - '&'
   - '#'
   - '%'
@@ -146,11 +146,11 @@ layers:
   - NEXT
   - VOL UP
   - PP
-  - {t: ▽, type: trans}
-  - PSCRN
   - CAPS
-  - INS
+  - PSCRN
+  - SLCK
   - PAUSE BREAK
+  - INS
   - {t: LCTRL, h: sticky}
   - {t: LALT, h: sticky}
   - {t: LSHFT, h: sticky}
@@ -176,17 +176,17 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   System:
-  - '&bootloader'
+  - F16
   - F1
   - F2
   - F3
   - F12
-  - F15
-  - F16
+  - F19
+  - F20
+  - F21
+  - F22
+  - F23
   - F17
-  - F18
-  - '&bootloader'
-  - F13
   - F4
   - F5
   - F6
@@ -196,7 +196,7 @@ layers:
   - {t: RSHFT, h: sticky}
   - {t: LALT, h: sticky}
   - {t: RCTRL, h: sticky}
-  - F14
+  - F18
   - F7
   - F8
   - F9
