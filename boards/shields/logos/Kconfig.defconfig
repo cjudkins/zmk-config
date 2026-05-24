@@ -24,7 +24,7 @@ config SPI
 config INPUT
     default y
 
-config PMW3610
+config PMW3610_ALT
     default y
 
 # I think this may already be the default, try with it disabled
