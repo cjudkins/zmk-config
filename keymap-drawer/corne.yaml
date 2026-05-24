@@ -40,7 +40,7 @@ layers:
   - System
   - Navigation
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
-  - {t: SPACE, s: BSPC}
+  - SPACE
   - Number
   - Symbol
   Navigation:
