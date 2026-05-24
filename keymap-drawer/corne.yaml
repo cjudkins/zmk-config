@@ -30,8 +30,8 @@ layers:
   - X
   - C
   - D
-  - V
-  - K
+  - {t: V, h: CAPS}
+  - {t: K, h: CAPS}
   - H
   - {t: ',', s: ;}
   - {t: ., s: ':'}
@@ -45,11 +45,11 @@ layers:
   - System
   Navigation:
   - {t: ▽, type: trans}
-  - Cmd+Z
-  - Cmd+X
-  - Cmd+C
-  - Cmd+V
-  - Sft+Cmd+Z
+  - UNDO
+  - Sft+DEL
+  - Ctl+INS
+  - Sft+INS
+  - AGAIN
   - Ctl+UP
   - Sft+Ctl+TAB
   - END
@@ -73,7 +73,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: CAPS, h: sticky}
+  - {t: CAPS, h: CAPS}
   - '&tri_win'
   - Cmd+[
   - PG DN
@@ -88,11 +88,11 @@ layers:
   - {t: ▽, type: trans}
   Number:
   - {t: ▽, type: trans}
-  - +
-  - '1'
-  - '2'
-  - '3'
-  - '*'
+  - KP PLUS
+  - '7'
+  - '8'
+  - '9'
+  - KP MULTIPLY
   - Sft+Cmd+Z
   - Cmd+V
   - Cmd+C
@@ -100,11 +100,11 @@ layers:
   - Cmd+Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
+  - KP MINUS
   - '4'
   - '5'
   - '6'
-  - /
+  - KP SLASH
   - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
   - {t: RGUI, h: RGUI}
   - {t: RSHFT, h: RSHFT}
@@ -112,16 +112,16 @@ layers:
   - {t: RCTRL, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '='
-  - '7'
-  - '8'
-  - '9'
+  - KP EQUAL
+  - '1'
+  - '2'
+  - '3'
   - '0'
-  - {t: CAPS, h: sticky}
-  - {t: (, s: '{'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ), s: '}'}
+  - {t: CAPS, h: CAPS}
+  - KP LPAR
+  - KP DOT
+  - KP COMMA
+  - KP RPAR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -179,7 +179,7 @@ layers:
   - PP
   - NEXT
   - VOL UP
-  - CAPS
+  - {t: ▽, type: trans}
   - PSCRN
   - SLCK
   - PAUSE BREAK
@@ -202,7 +202,7 @@ layers:
   - Cmd+Opt+ESCAPE
   - Ctl+Cmd+SPACE
   - Cmd+SPACE
-  - {t: CAPS, h: sticky}
+  - {t: CAPS, h: CAPS}
   - {t: ▽, type: trans}
   - Sft+RET
   - Opt+BSPC
@@ -218,9 +218,9 @@ layers:
   System:
   - {t: ▽, type: trans}
   - F16
-  - F1
-  - F2
-  - F3
+  - F7
+  - F8
+  - F9
   - F12
   - F19
   - F20
@@ -242,11 +242,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F18
-  - F7
-  - F8
-  - F9
+  - F1
+  - F2
+  - F3
   - F10
-  - {t: CAPS, h: sticky}
+  - {t: CAPS, h: CAPS}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
