@@ -3,7 +3,16 @@ layers:
   Base:
   - [Q, W, F, P, B, J, L, U, Y, '''']
   - [A, R, S, T, G, M, N, E, I, O]
-  - [Z, X, C, D, V, K, H, '&morph_comma', '&morph_period', '&morph_qmark']
+  - - Z
+    - X
+    - C
+    - D
+    - V
+    - K
+    - H
+    - {t: ',', s: ;}
+    - '&mo_period'
+    - {t: '?', s: '!'}
   - [Pointer, '&td_shift_caps', '&morph_space', Lower]
   Pointer:
   - - {t: ▽, type: trans}
@@ -76,7 +85,16 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
   Raise:
-  - ['`', '1', '2', '3', \, DELETE, '&morph_lpar', '&morph_lbkt', '&morph_rbkt', '&morph_rpar']
+  - - '`'
+    - '1'
+    - '2'
+    - '3'
+    - \
+    - DELETE
+    - {t: (, s: '{'}
+    - {t: '[', s: <}
+    - {t: ']', s: '>'}
+    - {t: ), s: '}'}
   - - '-'
     - '4'
     - '5'
