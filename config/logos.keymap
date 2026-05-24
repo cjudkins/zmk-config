@@ -245,7 +245,7 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)                &tri_app_swap &kp TAB_L  &kp DSKTP_L &kp DSKTP_R &kp TAB_R
+                &kp ESC &kp LG(X) &kp LG(C)    &kp LG(V)   &kp LG(Z)                &tri_app &kp TAB_L  &trans &trans &kp TAB_R
                 &sk LCTRL   &sk LALT    &sk LSHFT  &sk LGUI &sk MEH             &kp HOME &kp LEFT &kp DOWN &kp UP &kp RIGHT
                 &trans &kp LS(TAB) &kp TAB &kp RET &kp LS(RET)                &kp END &kp BACK &kp PG_DN &kp PG_UP &kp FWRD
                                                           &trans &trans        &trans &trans
