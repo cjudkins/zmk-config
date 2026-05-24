@@ -45,11 +45,11 @@ layers:
   - Symbol
   Navigation:
   - {t: ▽, type: trans}
-  - AC UNDO
-  - CUT
-  - COPY
-  - PASTE
-  - AC REDO
+  - Cmd+Z
+  - Cmd+X
+  - Cmd+C
+  - Cmd+V
+  - Sft+Cmd+Z
   - Ctl+UP
   - Sft+Ctl+TAB
   - END
@@ -94,9 +94,9 @@ layers:
   - '9'
   - KP MULTIPLY
   - Sft+Cmd+Z
-  - AC PASTE
-  - AC COPY
-  - AC CUT
+  - Cmd+V
+  - Cmd+C
+  - Cmd+X
   - Cmd+Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -172,14 +172,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  Adjust:
+  Editing:
   - {t: ▽, type: trans}
   - VOL DN
   - PREV
   - PP
   - NEXT
   - VOL UP
-  - {t: ▽, type: trans}
+  - Ctl+Cmd+SPACE
   - PSCRN
   - SLCK
   - PAUSE BREAK
@@ -203,7 +203,7 @@ layers:
   - Ctl+Cmd+SPACE
   - Cmd+SPACE
   - {t: CAPS, h: CAPS}
-  - {t: ▽, type: trans}
+  - Sft+ESC
   - Sft+RET
   - Opt+BSPC
   - Opt+DEL
@@ -217,7 +217,7 @@ layers:
   - {t: ▽, type: trans}
   System:
   - {t: ▽, type: trans}
-  - F16
+  - CL AL LOCK
   - F7
   - F8
   - F9
@@ -229,7 +229,7 @@ layers:
   - F23
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F17
+  - Cmd+Opt+ESCAPE
   - F4
   - F5
   - F6
@@ -241,7 +241,7 @@ layers:
   - {t: RCTRL, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F18
+  - Cmd+SPACE
   - F1
   - F2
   - F3
