@@ -227,7 +227,7 @@
             bindings = <
                 &kp Q   &kp W   &kp F   &kp P   &kp B       &kp J   &kp L   &kp U   &kp Y   &kp APOS
                 &kp A   &kp R   &kp S   &kp T   &kp G       &kp M   &kp N   &kp E   &kp I   &kp O
-                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &mo_comma    &mo_period   &mo_qmark
+                &kp Z   &kp X   &kp C   &kp D   &kp V       &kp K   &kp H   &mo_comma    &mo_dot   &mo_qmark
                                 &mo NAV   &td_shift_caps  &morph_space   &mo NUM
             >;
         };
