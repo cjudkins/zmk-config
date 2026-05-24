@@ -127,6 +127,15 @@
             bindings = <&sk LSHIFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
         };
+        
+        mo_space: morph_space {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "Space-Backspace";
+
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp BSPC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         tri_app: tri_app_swap {
             compatible = "zmk,behavior-tri-state";
@@ -236,7 +245,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
      &none       &kp Z         &kp X        &kp C         &kp D        &tlhml CAPS V           &tlhmr CAPS K         &kp H       &mo_comma      &mo_dot     &mo_qmark    &none
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
-                                                &mo SYM       &mo NAV       &mo_sc       &lt SYM SPACE   &mo NUM        &mo SYS
+                                                &mo SYS       &mo NAV       &mo_sc       &mo_space   &mo NUM        &mo SYM
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
