@@ -132,10 +132,10 @@ layers:
   Symbol:
   - {t: ▽, type: trans}
   - '`'
-  - '~'
   - _
-  - '-'
   - '|'
+  - '-'
+  - '~'
   - '&'
   - '#'
   - '%'
@@ -217,7 +217,7 @@ layers:
   - {t: ▽, type: trans}
   System:
   - {t: ▽, type: trans}
-  - CL AL LOCK
+  - AL LOCK
   - F7
   - F8
   - F9
