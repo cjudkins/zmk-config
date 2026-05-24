@@ -14,7 +14,7 @@ The layout and shortcuts are macOS-centric. On Windows I use [PowerToys](https:/
 - Thumb shift is used for shifting alpha characters, and homerow Shift is for keyboard shortcuts
 - Simple is better than clever -- complex hold-taps and macros are avoided (Bluetooth keyboards are already plenty finicky)
 
-![](keymap-drawer/cradio.svg)
+![](keymap-drawer/corne.svg)
 
 ### Thumb Cluster
 

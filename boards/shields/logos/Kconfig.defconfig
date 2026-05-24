@@ -24,8 +24,8 @@ config SPI
 config INPUT
     default y
 
-#config PMW3610
-#    default y
+config PMW3610
+    default y
 
 # I think this may already be the default, try with it disabled
 #config NFCT_PINS_AS_GPIOS
