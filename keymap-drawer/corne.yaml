@@ -45,11 +45,11 @@ layers:
   - Symbol
   Navigation:
   - {t: ▽, type: trans}
-  - UNDO
-  - Sft+DEL
-  - Ctl+INS
-  - Sft+INS
-  - AGAIN
+  - AC UNDO
+  - CUT
+  - COPY
+  - PASTE
+  - AC REDO
   - Ctl+UP
   - Sft+Ctl+TAB
   - END
@@ -94,9 +94,9 @@ layers:
   - '9'
   - KP MULTIPLY
   - Sft+Cmd+Z
-  - Cmd+V
-  - Cmd+C
-  - Cmd+X
+  - AC PASTE
+  - AC COPY
+  - AC CUT
   - Cmd+Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
