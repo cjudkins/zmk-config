@@ -11,7 +11,7 @@ layers:
     - K
     - H
     - {t: ',', s: ;}
-    - '&mo_period'
+    - {t: ., s: ':'}
     - {t: '?', s: '!'}
   - [Pointer, '&td_shift_caps', '&morph_space', Lower]
   Pointer:
