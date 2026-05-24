@@ -13,7 +13,10 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - {t: '?', s: '!'}
-  - [Pointer, '&td_shift_caps', '&morph_space', Lower]
+  - - Pointer
+    - {t: LSHIFT, h: sticky, s: '&caps_word'}
+    - SPACE
+    - Lower
   Pointer:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
