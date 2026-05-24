@@ -41,7 +41,16 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Lower:
-  - [ESC, Cmd+X, Cmd+C, Cmd+V, Cmd+Z, '&tri_app_swap', Sft+Ctl+TAB, DSKTP L, DSKTP R, Ctl+TAB]
+  - - ESC
+    - Cmd+X
+    - Cmd+C
+    - Cmd+V
+    - Cmd+Z
+    - '&tri_app'
+    - Sft+Ctl+TAB
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Ctl+TAB
   - - {t: LCTRL, h: sticky}
     - {t: LALT, h: sticky}
     - {t: LSHFT, h: sticky}
