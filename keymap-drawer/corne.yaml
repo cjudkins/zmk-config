@@ -37,12 +37,12 @@ layers:
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
   - ''
-  - Symbol
+  - System
   - Navigation
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
-  - {t: SPACE, h: Symbol}
+  - {t: SPACE, s: BSPC}
   - Number
-  - System
+  - Symbol
   Navigation:
   - {t: ▽, type: trans}
   - UNDO
@@ -166,12 +166,12 @@ layers:
   - ':'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   Adjust:
   - {t: ▽, type: trans}
   - VOL DN
@@ -252,12 +252,12 @@ layers:
   - {t: BT, h: '2'}
   - BT CLR
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
   k: ESCAPE
