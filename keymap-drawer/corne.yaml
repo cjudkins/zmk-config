@@ -162,8 +162,8 @@ layers:
   - '0'
   - {t: CAPS, h: CAPS}
   - KP LPAR
-  - KP DOT
   - KP COMMA
+  - KP DOT
   - KP RPAR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
