@@ -1,0 +1,19 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        cmb_esc_l {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+
+        cmb_esc_r {
+            bindings = <&kp ESCAPE>;
+            key-positions = <9 10>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
+        };
+    };
+};
