@@ -8,14 +8,14 @@
 #define THUMBS_L 36 37 38
 #define THUMBS_R 39 40 41
 
-#include "../shared/layer-list.h"
-#include "../shared/shorthands.h"
-#include "../shared/tuning.h"
+#include "./shared/layer-list.h"
+#include "./shared/shorthands.h"
+#include "./shared/tuning.h"
 
-#include "../shared/custom-behaviors.dtsi"
-#include "../shared/custom-combos.dtsi"
-#include "../shared/custom-layers.dtsi"
-#include "../shared/custom-overrides.dtsi"
+#include "./shared/custom-behaviors.dtsi"
+#include "./shared/custom-combos.dtsi"
+#include "./shared/custom-layers.dtsi"
+#include "./shared/custom-overrides.dtsi"
 
 / {
     keymap {
