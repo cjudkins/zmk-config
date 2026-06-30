@@ -155,7 +155,7 @@ layers:
   - {t: RCTRL, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - KP EQUAL
+  - '='
   - '1'
   - '2'
   - '3'
