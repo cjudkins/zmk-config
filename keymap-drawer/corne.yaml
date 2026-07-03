@@ -94,9 +94,9 @@ layers:
   - F9
   - F12
   - F19
-  - F20
-  - F21
-  - F22
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
   - F23
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
