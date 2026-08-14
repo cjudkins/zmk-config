@@ -31,7 +31,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
        &none         &kp Z         &kp X        &kp C         &kp D     &hml CAPS V     &hmr CAPS K      &kp H       &mo_comma      &mo_dot     &mo_qmark     &none
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
-                                                &mo SYS      &mo SYM      &mo_sc       &lt NUM SPACE  &lt NAV RET   &lt EDIT TAB
+                                                &lt DEL SYS &lt BSPC SYM   &mo_sc       &lt NUM SPACE  &lt NAV RET   &lt EDIT TAB
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -70,11 +70,11 @@
             display-name = "Number";
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-      &trans        &kp PLUS       &kp N7        &kp N8       &kp N9  &kp KP_MULTIPLY   &kp U_REDO    &kp U_PASTE    &kp U_COPY    &kp U_CUT   &kp U_UNDO     &trans
+   &trans   &kp U_REDO    &kp U_PASTE    &kp U_COPY    &kp U_CUT   &kp U_UNDO            &kp PLUS       &kp N7        &kp N8       &kp N9  &kp KP_MULTIPLY &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans       &kp MINUS       &kp N4        &kp N5       &kp N6   &kp KP_SLASH     &hm MEH MEH  &hm RGUI RGUI &hm RSHFT RSHFT &hm LALT LALT &hm RCTRL RCTRL &trans
+   &trans &hm RCTRL RCTRL  &hm LALT LALT &hm RSHFT RSHFT &hm RGUI RGUI  &hm MEH MEH       &kp MINUS       &kp N4        &kp N5       &kp N6   &kp KP_SLASH &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans     &kp EQUAL      &kp N1        &kp N2       &kp N3      &kp N0       &hm CAPS CAPS  &kp KP_LPAR  &kp KP_COMMA   &kp KP_DOT   &kp KP_RPAR    &trans
+   &trans  &hm CAPS CAPS  &kp KP_LPAR  &kp KP_COMMA   &kp KP_DOT   &kp KP_RPAR            &kp EQUAL      &kp N1        &kp N2       &kp N3      &kp N0 &trans
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &trans       &trans           &trans       &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
