@@ -38,11 +38,11 @@ layers:
   - {t: '?', s: '!'}
   - ''
   - System
-  - Navigation
-  - {t: LSHIFT, h: sticky, s: '&caps_word'}
-  - SPACE
-  - Number
   - Symbol
+  - {t: LSHIFT, h: sticky, s: '&caps_word'}
+  - {t: SPACE, h: Number}
+  - {t: RET, h: Navigation}
+  - {t: TAB, h: Editing}
   Navigation:
   - {t: ▽, type: trans}
   - Cmd+Z
@@ -81,10 +81,10 @@ layers:
   - Cmd+]
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   System:
   - {t: ▽, type: trans}
@@ -169,8 +169,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Symbol:
   - {t: ▽, type: trans}
@@ -210,11 +210,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Editing:
   - {t: ▽, type: trans}
   - VOL DN
@@ -253,11 +253,11 @@ layers:
   - Sft+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
   k: ESCAPE
