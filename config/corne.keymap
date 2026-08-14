@@ -14,7 +14,7 @@
 
 #include "./shared/custom-behaviors.dtsi"
 #include "./shared/custom-combos.dtsi"
-#include "./shared/custom-layers.dtsi"
+//#include "./shared/custom-layers.dtsi"
 #include "./shared/custom-overrides.dtsi"
 
 / {
@@ -31,7 +31,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
        &none         &kp Z         &kp X        &kp C         &kp D     &hml CAPS V     &hmr CAPS K      &kp H       &mo_comma      &mo_dot     &mo_qmark     &none
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
-                                                &mo SYS      &mo NAV      &mo_sc         &kp SPACE      &mo NUM       &mo SYM
+                                                &mo SYS      &mo SYM      &mo_sc       &lt NUM SPACE  &lt NAV RET   &lt EDIT TAB
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
             >;
         };
