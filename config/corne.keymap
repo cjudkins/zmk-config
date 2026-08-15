@@ -70,11 +70,11 @@
             display-name = "Number";
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-   &trans   &kp U_REDO    &kp U_PASTE    &kp U_COPY    &kp U_CUT   &kp U_UNDO            &kp PLUS       &kp N7        &kp N8       &kp N9  &kp KP_MULTIPLY &trans
+      &trans       &kp U_UNDO   &kp U_CUT     &kp U_COPY      &kp U_PASTE    &kp U_REDO         &kp PLUS       &kp N7        &kp N8       &kp N9  &kp KP_MULTIPLY &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-   &trans &hm RCTRL RCTRL  &hm LALT LALT &hm RSHFT RSHFT &hm RGUI RGUI  &hm MEH MEH       &kp MINUS       &kp N4        &kp N5       &kp N6   &kp KP_SLASH &trans
+     &trans     &hm LCTRL LCTRL  &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI  &hm MEH MEH       &kp MINUS       &kp N4        &kp N5       &kp N6   &kp KP_SLASH &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-   &trans  &hm CAPS CAPS  &kp KP_LPAR  &kp KP_COMMA   &kp KP_DOT   &kp KP_RPAR            &kp EQUAL      &kp N1        &kp N2       &kp N3      &kp N0 &trans
+   &trans         &kp KP_LPAR   &trans      &trans      &kp KP_RPAR    &hm CAPS CAPS          &kp EQUAL      &kp N1        &kp N2       &kp N3      &kp N0 &trans
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &trans       &trans           &trans       &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
