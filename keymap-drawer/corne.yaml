@@ -37,8 +37,8 @@ layers:
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
   - ''
-  - System
-  - Symbol
+  - {t: DEL, h: System}
+  - {t: BSPC, h: Symbol}
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
   - {t: SPACE, h: Number}
   - {t: RET, h: Navigation}
@@ -131,40 +131,40 @@ layers:
   - {t: ▽, type: trans}
   Number:
   - {t: ▽, type: trans}
+  - Cmd+Z
+  - Cmd+X
+  - Cmd+C
+  - Cmd+V
+  - Sft+Cmd+Z
   - +
   - '7'
   - '8'
   - '9'
   - KP MULTIPLY
-  - Sft+Cmd+Z
-  - Cmd+V
-  - Cmd+C
-  - Cmd+X
-  - Cmd+Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: LCTRL, h: LCTRL}
+  - {t: LALT, h: LALT}
+  - {t: LSHFT, h: LSHFT}
+  - {t: LGUI, h: LGUI}
+  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
   - '-'
   - '4'
   - '5'
   - '6'
   - KP SLASH
-  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
-  - {t: RGUI, h: RGUI}
-  - {t: RSHFT, h: RSHFT}
-  - {t: LALT, h: LALT}
-  - {t: RCTRL, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - KP LPAR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - KP RPAR
+  - {t: CAPS, h: CAPS}
   - '='
   - '1'
   - '2'
   - '3'
   - '0'
-  - {t: CAPS, h: CAPS}
-  - KP LPAR
-  - KP COMMA
-  - KP DOT
-  - KP RPAR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
