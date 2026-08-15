@@ -177,19 +177,19 @@ layers:
   - '`'
   - _
   - '|'
-  - '-'
+  - '@'
   - '~'
-  - '&'
-  - '#'
-  - '%'
-  - ^
+  - {t: ▽, type: trans}
   - $
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - <
-  - '{'
-  - {t: '[', s: <}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: (, s: '{'}
+  - {t: '[', s: <}
+  - {t: ']', s: '>'}
+  - {t: ), s: '}'}
   - /
   - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
   - {t: RGUI, h: sticky}
@@ -198,15 +198,15 @@ layers:
   - {t: RCTRL, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '>'
-  - '}'
-  - {t: ']', s: '>'}
-  - {t: ), s: '}'}
+  - '&'
+  - '#'
+  - '%'
+  - ^
   - \
   - {t: CAPS, h: sticky}
-  - '@'
-  - ;
-  - ':'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -222,11 +222,11 @@ layers:
   - PP
   - NEXT
   - VOL UP
-  - Ctl+Cmd+SPACE
-  - PSCRN
-  - SLCK
-  - PAUSE BREAK
-  - INS
+  - Sft+Cmd+Z
+  - Cmd+V
+  - Cmd+C
+  - Cmd+X
+  - Cmd+Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: LCTRL, h: LCTRL}
@@ -241,16 +241,16 @@ layers:
   - TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - AL LOCK
-  - Cmd+Opt+ESCAPE
-  - Ctl+Cmd+SPACE
-  - Cmd+SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: CAPS, h: CAPS}
-  - Sft+ESC
-  - Sft+RET
-  - Opt+BSPC
-  - Opt+DEL
-  - Sft+TAB
+  - Ctl+Cmd+SPACE
+  - PSCRN
+  - SLCK
+  - PAUSE BREAK
+  - INS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
