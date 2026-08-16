@@ -37,12 +37,12 @@ layers:
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
   - ''
-  - {t: DEL, h: Editing}
+  - {t: DEL, h: System}
   - {t: BSPC, h: Symbol}
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
   - {t: SPACE, h: Number}
   - {t: RET, h: Navigation}
-  - {t: TAB, h: System}
+  - {t: TAB, h: Editing}
   Navigation:
   - {t: ▽, type: trans}
   - Cmd+Z
@@ -123,12 +123,12 @@ layers:
   - {t: BT, h: '2'}
   - BT CLR
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Number:
   - {t: ▽, type: trans}
   - Cmd+Z
@@ -252,12 +252,12 @@ layers:
   - PAUSE BREAK
   - INS
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
   k: ESCAPE
