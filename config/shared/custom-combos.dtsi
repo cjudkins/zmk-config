@@ -18,28 +18,28 @@
 
         cmb_minus_l {
             bindings = <&kp MINUS>;
-            key-positions = <12 13>;
+            key-positions = <13 14>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         cmb_minus_r {
             bindings = <&kp MINUS>;
-            key-positions = <22 23>;
+            key-positions = <21 22>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         cmb_slash_l {
-            bindings = <&kp MINUS>;
-            key-positions = <24 25>;
+            bindings = <&kp SLASH>;
+            key-positions = <25 26>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
 
         cmb_slash_r {
-            bindings = <&kp MINUS>;
-            key-positions = <30 31>;
+            bindings = <&kp SLASH>;
+            key-positions = <33 34>;
             timeout-ms = <COMBO_TIMEOUT_MS>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE_MS>;
         };
