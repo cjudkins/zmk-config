@@ -241,16 +241,16 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: CAPS, h: CAPS}
   - VOL DN
   - PREV
-  - PP
   - NEXT
   - VOL UP
+  - {t: CAPS, h: CAPS}
+  - Sft+ESC
+  - Sft+RET
+  - Sft+TAB
+  - Opt+BSPC
+  - Opt+DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
