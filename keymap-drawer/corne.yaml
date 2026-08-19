@@ -40,9 +40,9 @@ layers:
   - System
   - Symbol
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
-  - {t: SPACE, h: Number}
+  - {t: SPACE, h: Editing}
   - Navigation
-  - Editing
+  - Number
   Navigation:
   - {t: ▽, type: trans}
   - Cmd+Z
@@ -169,9 +169,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   Symbol:
   - {t: ▽, type: trans}
   - '`'
@@ -236,8 +236,8 @@ layers:
   - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
   - ESC
   - RET
-  - BSPC
   - TAB
+  - BSPC
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -255,9 +255,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
   k: ESCAPE
