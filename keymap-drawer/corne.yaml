@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   Base:
-  - ''
+  - '`'
   - Q
   - W
   - F
@@ -12,8 +12,8 @@ layers:
   - U
   - Y
   - ''''
-  - ''
-  - ''
+  - \
+  - '-'
   - {t: A, h: LCTRL}
   - {t: R, h: LALT}
   - {t: S, h: LSHFT}
@@ -24,8 +24,8 @@ layers:
   - {t: E, h: RSHFT}
   - {t: I, h: LALT}
   - {t: O, h: RCTRL}
-  - ''
-  - ''
+  - '['
+  - /
   - Z
   - X
   - C
@@ -36,7 +36,7 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - ''
+  - ']'
   - System
   - Symbol
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
@@ -153,7 +153,7 @@ layers:
   - '5'
   - '6'
   - KP SLASH
-  - {t: ▽, type: trans}
+  - {t: (, s: '{'}
   - {t: ▽, type: trans}
   - KP LPAR
   - {t: ▽, type: trans}
@@ -165,7 +165,7 @@ layers:
   - '2'
   - '3'
   - '0'
-  - {t: ▽, type: trans}
+  - {t: ), s: '}'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -237,8 +237,8 @@ layers:
   - ESC
   - RET
   - TAB
-  - BSPC
   - DEL
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - VOL DN
