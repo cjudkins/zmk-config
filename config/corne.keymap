@@ -25,11 +25,11 @@
             display-name = "Base";
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-       &none         &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS      &none
+     &kp GRAVE       &kp Q         &kp W        &kp F         &kp P        &kp B           &kp J         &kp L         &kp U         &kp Y      &kp APOS     &kp BSLH
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-       &none     &hml LCTRL A  &hml LALT  R   &hml LSHFT S &hml LGUI T  &hml MEH G      &hmr MEH M    &hmr RGUI N   &hmr RSHFT E  &hmr LALT I  &hmr RCTRL O   &none
+     &kp MINUS    &hml LCTRL A  &hml LALT  R   &hml LSHFT S &hml LGUI T  &hml MEH G      &hmr MEH M    &hmr RGUI N   &hmr RSHFT E  &hmr LALT I  &hmr RCTRL O &kp LBKT
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-       &none         &kp Z         &kp X        &kp C         &kp D     &hml CAPS V     &hmr CAPS K      &kp H       &mo_comma      &mo_dot     &mo_qmark     &none
+     &kp SLASH       &kp Z         &kp X        &kp C         &kp D     &hml CAPS V     &hmr CAPS K      &kp H       &mo_comma      &mo_dot     &mo_qmark    &kp RBKT
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &mo SYS      &mo SYM      &mo_sc       &lt EDIT SPACE    &mo NAV      &mo NUM
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -72,9 +72,9 @@
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
       &trans       &kp U_UNDO   &kp U_CUT     &kp U_COPY   &kp U_PASTE  &kp U_REDO       &kp PLUS       &kp N7        &kp N8        &kp N9   &kp KP_MULTIPLY  &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans     &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH &kp MINUS      &kp N4        &kp N5        &kp N6     &kp KP_SLASH   &trans
+      &trans     &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH &kp MINUS      &kp N4        &kp N5        &kp N6     &kp KP_SLASH   &mo_lpar
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans      &kp KP_LPAR     &trans        &trans     &kp KP_RPAR &hm CAPS CAPS     &kp EQUAL      &kp N1        &kp N2        &kp N3       &kp N0       &trans
+      &trans      &kp KP_LPAR     &trans        &trans     &kp KP_RPAR &hm CAPS CAPS     &kp EQUAL      &kp N1        &kp N2        &kp N3       &kp N0       &mo_rpar
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &trans       &trans           &trans       &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -85,7 +85,7 @@
             display-name = "Symbol";
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-      &trans       &kp GRAVE     &kp UNDER     &kp PIPE     &kp MINUS    &kp TILDE        &kp CARET        &kp HASH        &kp AT        &kp DLLR       &kp PRCNT       &trans
+      &trans       &kp GRAVE     &kp UNDER     &kp PIPE     &kp MINUS    &kp TILDE      &kp CARET      &kp HASH       &kp AT        &kp DLLR    &kp PRCNT       &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
       &trans       &mo_lpar      &mo_lbkt      &mo_rbkt     &mo_rpar     &kp SLASH        &sk MEH      &sk RGUI      &sk RSHFT      &sk LALT    &sk RCTRL     &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
@@ -102,9 +102,9 @@
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
       &trans       &kp EMOJI     &kp SLCK   &kp PAUSE_BREAK &kp PSCRN    &kp INS        &kp U_REDO    &kp U_PASTE   &kp U_COPY     &kp U_CUT   &kp U_UNDO     &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH      &kp ESC       &kp RET       &kp TAB      &kp BSPC      &kp DEL      &trans
+      &trans &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH      &kp ESC       &kp RET       &kp TAB      &kp DEL      &kp BSPC      &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans    &kp C_VOL_DN  &kp C_PREV     &kp C_NEXT  &kp C_VOL_UP   &hm CAPS CAPS &kp RS(ESC) &kp RS(RET)  &kp RS(TAB)  &kp LA(BSPC)  &kp LA(DEL) &trans
+      &trans    &kp C_VOL_DN  &kp C_PREV     &kp C_NEXT  &kp C_VOL_UP  &hm CAPS CAPS     &kp RS(ESC)  &kp RS(RET)   &kp RS(TAB)   &kp LA(BSPC) &kp LA(DEL) &trans
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &trans       &trans          &trans        &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
