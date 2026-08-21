@@ -1,8 +1,8 @@
 #pragma once
 
 #define BASE    0
-#define NAV     1
-#define SYS     2
-#define NUM     3
-#define SYM     4
-#define EDIT    5
+#define EDIT    1
+#define NAV     2
+#define NUM     4
+#define SYS     5
+#define SYM     6
