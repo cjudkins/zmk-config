@@ -31,25 +31,68 @@ layers:
   - C
   - D
   - {t: V, h: CAPS}
-  - {t: K, h: CAPS}
+  - K
   - H
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
   - ']'
-  - System
   - Symbol
+  - System
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
   - {t: SPACE, h: Editing}
   - Navigation
   - Number
+  Editing:
+  - {t: ▽, type: trans}
+  - VOL DN
+  - PREV
+  - NEXT
+  - VOL UP
+  - {t: ▽, type: trans}
+  - Sft+Cmd+Z
+  - Cmd+V
+  - Cmd+C
+  - Cmd+X
+  - Cmd+Z
+  - SLCK
+  - {t: ▽, type: trans}
+  - {t: LCTRL, h: LCTRL}
+  - {t: LALT, h: LALT}
+  - {t: LSHFT, h: LSHFT}
+  - {t: LGUI, h: LGUI}
+  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
+  - ESC
+  - RET
+  - Sft+TAB
+  - TAB
+  - Sft+RET
+  - INS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+Cmd+SPACE
+  - {t: CAPS, h: CAPS}
+  - PSCRN
+  - BSPC
+  - Opt+BSPC
+  - Opt+DEL
+  - DEL
+  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Navigation:
   - {t: ▽, type: trans}
-  - Cmd+Z
-  - Cmd+X
-  - Cmd+C
-  - Cmd+V
-  - Sft+Cmd+Z
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+UP
   - Sft+Ctl+TAB
   - END
@@ -67,7 +110,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - {t: ▽, type: trans}
+  - {t: '[', s: <}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,63 +122,20 @@ layers:
   - PG DN
   - PG UP
   - Cmd+]
-  - {t: ▽, type: trans}
+  - {t: ']', s: '>'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  System:
-  - {t: ▽, type: trans}
-  - AL LOCK
-  - F7
-  - F8
-  - F9
-  - F12
-  - F19
-  - {t: BT DISC, h: '0'}
-  - {t: BT DISC, h: '1'}
-  - {t: BT DISC, h: '2'}
-  - F23
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Cmd+Opt+ESCAPE
-  - F4
-  - F5
-  - F6
-  - F11
-  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
-  - {t: RGUI, h: RGUI}
-  - {t: RSHFT, h: RSHFT}
-  - {t: LALT, h: LALT}
-  - {t: RCTRL, h: RCTRL}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Cmd+SPACE
-  - F1
-  - F2
-  - F3
-  - F10
-  - {t: CAPS, h: CAPS}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - BT CLR
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Number:
   - {t: ▽, type: trans}
-  - Cmd+Z
-  - Cmd+X
-  - Cmd+C
-  - Cmd+V
-  - Sft+Cmd+Z
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - +
   - '7'
   - '8'
@@ -172,6 +172,49 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  System:
+  - {t: ▽, type: trans}
+  - AL LOCK
+  - F7
+  - F8
+  - F9
+  - F12
+  - F19
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - F23
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Cmd+Opt+ESCAPE
+  - F4
+  - F5
+  - F6
+  - F11
+  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
+  - {t: RGUI, h: RGUI}
+  - {t: RSHFT, h: RSHFT}
+  - {t: LALT, h: LALT}
+  - {t: RCTRL, h: RCTRL}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Cmd+SPACE
+  - F1
+  - F2
+  - F3
+  - F10
+  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Symbol:
   - {t: ▽, type: trans}
   - '`'
@@ -179,11 +222,11 @@ layers:
   - '|'
   - '-'
   - '~'
-  - ^
-  - '#'
+  - {t: ▽, type: trans}
   - '@'
-  - $
   - '%'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: (, s: '{'}
@@ -191,11 +234,11 @@ layers:
   - {t: ']', s: '>'}
   - {t: ), s: '}'}
   - /
-  - {t: Opt+Ctl+LEFT SHIFT, h: sticky}
-  - {t: RGUI, h: sticky}
-  - {t: RSHFT, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: RCTRL, h: sticky}
+  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
+  - {t: RGUI, h: RGUI}
+  - {t: RSHFT, h: RSHFT}
+  - {t: LALT, h: LALT}
+  - {t: RCTRL, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ^
@@ -203,59 +246,16 @@ layers:
   - $
   - '#'
   - \
-  - {t: CAPS, h: sticky}
-  - '%'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Editing:
-  - {t: ▽, type: trans}
-  - Ctl+Cmd+SPACE
-  - SLCK
-  - PAUSE BREAK
-  - PSCRN
-  - INS
-  - Sft+Cmd+Z
-  - Cmd+V
-  - Cmd+C
-  - Cmd+X
-  - Cmd+Z
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: LCTRL, h: LCTRL}
-  - {t: LALT, h: LALT}
-  - {t: LSHFT, h: LSHFT}
-  - {t: LGUI, h: LGUI}
-  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
-  - ESC
-  - RET
-  - TAB
-  - DEL
-  - BSPC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - VOL DN
-  - PREV
-  - NEXT
-  - VOL UP
-  - {t: CAPS, h: CAPS}
-  - Sft+ESC
-  - Sft+RET
-  - Sft+TAB
-  - Opt+BSPC
-  - Opt+DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
