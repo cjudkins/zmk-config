@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   Base:
-  - '`'
+  - ''
   - Q
   - W
   - F
@@ -12,8 +12,8 @@ layers:
   - U
   - Y
   - ''''
-  - \
-  - '-'
+  - ''
+  - ''
   - {t: A, h: LCTRL}
   - {t: R, h: LALT}
   - {t: S, h: LSHFT}
@@ -24,8 +24,8 @@ layers:
   - {t: E, h: RSHFT}
   - {t: I, h: LALT}
   - {t: O, h: RCTRL}
-  - '['
-  - /
+  - ''
+  - ''
   - Z
   - X
   - C
@@ -36,8 +36,8 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - ']'
-  - Symbol
+  - ''
+  - ''
   - System
   - {t: LSHIFT, h: sticky, s: '&caps_word'}
   - {t: SPACE, h: Editing}
@@ -55,7 +55,7 @@ layers:
   - Cmd+C
   - Cmd+X
   - Cmd+Z
-  - SLCK
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: LCTRL, h: LCTRL}
   - {t: LALT, h: LALT}
@@ -67,19 +67,19 @@ layers:
   - Sft+TAB
   - TAB
   - Sft+RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PAUSE BREAK
   - INS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SLCK
   - Ctl+Cmd+SPACE
-  - {t: CAPS, h: CAPS}
+  - CAPS
   - PSCRN
   - BSPC
   - Opt+BSPC
   - Opt+DEL
   - DEL
-  - PAUSE BREAK
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -110,7 +110,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - {t: '[', s: <}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -122,7 +122,7 @@ layers:
   - PG DN
   - PG UP
   - Cmd+]
-  - {t: ']', s: '>'}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -136,11 +136,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - +
+  - '`'
   - '7'
   - '8'
   - '9'
-  - KP MULTIPLY
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: LCTRL, h: LCTRL}
@@ -152,20 +152,20 @@ layers:
   - '4'
   - '5'
   - '6'
-  - KP SLASH
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: (, s: '{'}
+  - {t: '[', s: <}
+  - {t: ']', s: '>'}
+  - {t: ), s: '}'}
   - {t: ▽, type: trans}
-  - KP LPAR
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP RPAR
-  - {t: CAPS, h: CAPS}
   - '='
   - '1'
   - '2'
   - '3'
   - '0'
-  - {t: ), s: '}'}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -211,49 +211,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Symbol:
-  - {t: ▽, type: trans}
-  - '`'
-  - _
-  - '|'
-  - '-'
-  - '~'
-  - {t: ▽, type: trans}
-  - '@'
-  - '%'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: (, s: '{'}
-  - {t: '[', s: <}
-  - {t: ']', s: '>'}
-  - {t: ), s: '}'}
-  - /
-  - {t: Opt+Ctl+LEFT SHIFT, h: Opt+Ctl+LEFT SHIFT}
-  - {t: RGUI, h: RGUI}
-  - {t: RSHFT, h: RSHFT}
-  - {t: LALT, h: LALT}
-  - {t: RCTRL, h: RCTRL}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ^
-  - '&'
-  - $
-  - '#'
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
