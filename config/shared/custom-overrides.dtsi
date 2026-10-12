@@ -2,3 +2,7 @@
     release-after-ms = <STICKY_TIMEOUT_MS>;
     quick-release;
 };
+
+&lt {
+    quick-tap-ms = <100>;
+}
