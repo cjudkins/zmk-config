@@ -112,11 +112,11 @@ layers:
   - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: (, s: '{'}
+  - {t: '[', s: <}
+  - {t: ']', s: '>'}
+  - {t: ), s: '}'}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: CAPS, h: CAPS}
   - '&tri_win'
   - Cmd+[
   - PG DN
@@ -155,10 +155,10 @@ layers:
   - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: (, s: '{'}
-  - {t: '[', s: <}
-  - {t: ']', s: '>'}
-  - {t: ), s: '}'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '='
   - '1'
