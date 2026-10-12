@@ -4,5 +4,5 @@
 };
 
 &lt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <200>;
 };
