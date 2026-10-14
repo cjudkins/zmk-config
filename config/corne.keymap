@@ -40,11 +40,11 @@
             display-name = "Editing";
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
-      &trans     &kp C_VOL_DN   &kp C_PREV     &kp C_NEXT  &kp C_VOL_UP   &trans        &kp U_REDO    &kp U_PASTE   &kp U_COPY     &kp U_CUT   &kp U_UNDO     &trans
+      &trans     &kp C_VOL_DN   &kp C_PREV     &kp C_NEXT  &kp C_VOL_UP  &kp PSCRN      &kp U_REDO    &kp U_PASTE   &kp U_COPY     &kp U_CUT   &kp U_UNDO     &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
       &trans  &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH     &kp ESC       &kp RET     &kp RS(TAB)     &kp TAB    &kp RS(RET)    &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans    &kp PAUSE_BREAK   &kp INS      &kp SLCK     &kp EMOJI    &kp CAPS        &kp PSCRN     &kp BSPC     &kp LA(BSPC)  &kp LA(DEL)    &kp DEL      &trans
+      &trans    &kp PAUSE_BREAK   &kp INS      &kp SLCK     &kp EMOJI    &kp CAPS         &kp F19       &kp BSPC    &kp LA(BSPC)  &kp LA(DEL)    &kp DEL      &trans
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &trans       &trans          &trans        &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -57,9 +57,9 @@
 //╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬────────────╮
       &trans        &trans         &trans       &trans        &trans      &trans         &kp EXPOS     &kp TAB_L      &kp END      &kp HOME     &kp TAB_R     &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans    &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH  &tri_app      &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT     &trans
+      &trans    &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH   &tri_app      &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT     &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans       &mo_lpar      &mo_lbkt      &mo_rbkt      &mo_rpar     &trans         &tri_win      &kp BACK      &kp PG_DN     &kp PG_UP    &kp FWRD      &trans
+      &trans       &mo_lpar      &mo_lbkt      &mo_rbkt      &mo_rpar     &kp CAPS        &tri_win      &kp BACK      &kp PG_DN     &kp PG_UP    &kp FWRD      &trans
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                  &trans      &trans       &trans          &trans        &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -74,7 +74,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
       &trans    &hm LCTRL LCTRL &hm LALT LALT &hm LSHFT LSHFT &hm LGUI LGUI &hm MEH MEH  &kp MINUS      &kp N4        &kp N5        &kp N6      &kp SLASH     &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼────────────┤
-      &trans        &trans        &trans        &trans       &trans       &trans         &kp EQUAL      &kp N1        &kp N2        &kp N3       &kp N0       &trans
+      &trans        &trans        &trans        &trans       &trans       &kp CAPS         &kp EQUAL      &kp N1        &kp N2        &kp N3       &kp N0       &trans
 //╰─────────────┼─────────────┼─────────────┼─────────────┼───────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴───────────┴────────────╯
                                                 &trans       &trans       &trans           &trans       &trans        &trans
 //                                          ╰─────────────┴───────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
