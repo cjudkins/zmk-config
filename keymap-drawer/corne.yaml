@@ -49,7 +49,7 @@ layers:
   - PREV
   - NEXT
   - VOL UP
-  - PSCRN
+  - PP
   - Sft+Cmd+Z
   - Cmd+V
   - Cmd+C
@@ -73,7 +73,7 @@ layers:
   - INS
   - SLCK
   - Ctl+Cmd+SPACE
-  - CAPS
+  - PSCRN
   - F19
   - BSPC
   - Opt+BSPC
